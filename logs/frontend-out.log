@@ -1,0 +1,64 @@
+2025-11-10 21:38 +05:30: Terminate batch job (Y/N)? 
+2025-11-10 21:48 +05:30: 
+2025-11-10 21:48 +05:30: > cmscrm-frontend@1.0.0 dev
+2025-11-10 21:48 +05:30: > vite --host 0.0.0.0 --port 8800
+2025-11-10 21:48 +05:30: 
+2025-11-10 21:48 +05:30: 
+2025-11-10 21:48 +05:30:   [32m[1mVITE[22m v7.1.9[39m  [2mready in [0m[1m183[22m[2m[0m ms[22m
+2025-11-10 21:48 +05:30: 
+2025-11-10 21:48 +05:30:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8800[22m/[39m
+2025-11-10 21:48 +05:30:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.34:[1m8800[22m/[39m
+2025-11-10 21:52 +05:30: 
+2025-11-10 21:52 +05:30: > cmscrm-frontend@1.0.0 dev
+2025-11-10 21:52 +05:30: > vite --host 0.0.0.0 --port 8800
+2025-11-10 21:52 +05:30: 
+2025-11-10 21:52 +05:30: 
+2025-11-10 21:52 +05:30:   [32m[1mVITE[22m v7.1.9[39m  [2mready in [0m[1m180[22m[2m[0m ms[22m
+2025-11-10 21:52 +05:30: 
+2025-11-10 21:52 +05:30:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8800[22m/[39m
+2025-11-10 21:52 +05:30:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.34:[1m8800[22m/[39m
+2025-11-10 21:54 +05:30: [2m9:54:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/UserPagesModal.jsx[22m
+2025-11-10 21:54 +05:30: [2m9:54:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-10 21:54 +05:30: [2m9:54:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/PageArrangement.jsx[22m
+2025-11-10 21:54 +05:30: [2m9:54:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/RolesPage.jsx, /src/index.css[22m
+2025-11-10 21:54 +05:30: [2m9:54:58 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/DashboardPage.jsx, /src/pages/RolesPage.jsx, /src/pages/PagesPage.jsx, /src/pages/UsersPage.jsx, /src/components/EnhancedSystemInformation.jsx, /src/components/EnhancedSystemPerformance.jsx, /src/components/Layout/Layout.jsx, /src/components/UserPagesModal.jsx[22m
+2025-11-10 21:54 +05:30: [2m9:54:59 pm[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
+2025-11-10 21:54 +05:30: [2m9:54:59 pm[22m [36m[1m[vite][22m[39m server restarted.
+2025-11-11 12:56 +05:30: 
+2025-11-11 12:56 +05:30: > cmscrm-frontend@1.0.0 dev
+2025-11-11 12:56 +05:30: > vite --host 0.0.0.0 --port 8800
+2025-11-11 12:56 +05:30: 
+2025-11-11 12:56 +05:30: 
+2025-11-11 12:56 +05:30:   [32m[1mVITE[22m v7.1.9[39m  [2mready in [0m[1m233[22m[2m[0m ms[22m
+2025-11-11 12:56 +05:30: 
+2025-11-11 12:56 +05:30:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8800[22m/[39m
+2025-11-11 12:56 +05:30:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.33:[1m8800[22m/[39m
+2025-11-11 12:56 +05:30:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.40.157:[1m8800[22m/[39m
+2025-11-11 16:53 +05:30: [2m4:53:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 16:53 +05:30: [2m4:53:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 16:56 +05:30: [2m4:56:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 16:57 +05:30: [2m4:57:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 16:57 +05:30: [2m4:57:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 16:57 +05:30: [2m4:57:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 17:00 +05:30: [2m5:00:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 17:00 +05:30: [2m5:00:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 17:01 +05:30: [2m5:01:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 17:02 +05:30: [2m5:02:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 17:02 +05:30: [2m5:02:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 17:03 +05:30: [2m5:03:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-11 17:03 +05:30: [2m5:03:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:02 +05:30: [2m2:02:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:02 +05:30: [2m2:02:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:03 +05:30: [2m2:03:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:03 +05:30: [2m2:03:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:04 +05:30: [2m2:04:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:04 +05:30: [2m2:04:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:04 +05:30: [2m2:04:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:05 +05:30: [2m2:05:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:06 +05:30: [2m2:06:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:06 +05:30: [2m2:06:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:06 +05:30: [2m2:06:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2025-11-12 14:07 +05:30: [2m2:07:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout/Layout.jsx[22m
+2026-02-21 20:03 +05:30: Terminate batch job (Y/N)? 
+2026-02-22 09:56 +05:30: Terminate batch job (Y/N)? 
+2026-02-23 15:41 +05:30: Terminate batch job (Y/N)? 
