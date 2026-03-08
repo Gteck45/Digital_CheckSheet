@@ -432,6 +432,31 @@ await pool.execute(`
 `);
 
 
+  /* AUDITS */
+  await pool.execute(`
+  CREATE TABLE IF NOT EXISTS \`audits\` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    entity_type ENUM('line','station','model') NOT NULL,
+    entity_id INT NOT NULL,
+    entity_name VARCHAR(150) NOT NULL DEFAULT '',
+    template_id INT NOT NULL,
+    template_name VARCHAR(150) DEFAULT '',
+    slot_id INT NULL,
+    auditor_id INT NULL,
+    auditor_name VARCHAR(100) DEFAULT '',
+    audit_date DATE NOT NULL,
+    audit_time TIME NOT NULL,
+    answers JSON NOT NULL,
+    status ENUM('submitted','draft') DEFAULT 'submitted',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_entity (entity_type, entity_id),
+    INDEX idx_auditor (auditor_id),
+    INDEX idx_date (audit_date),
+    CONSTRAINT fk_audit_template FOREIGN KEY (template_id) REFERENCES templates(id) ON DELETE RESTRICT
+  ) ENGINE=InnoDB;
+  `);
+
   await pool.execute("SET FOREIGN_KEY_CHECKS=1;");
 
   console.log("✅ Tables Created");

@@ -34,6 +34,7 @@ import AuditListPage from "./pages/AuditListPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import CreateAuditPage from "./pages/audits/CreateAuditPage";
 import AuditTemplatePage from "./pages/audits/AuditTemplatePage";
+import AuditDetailPage from "./pages/audits/AuditDetailPage";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -238,6 +239,15 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <AuditTemplatePage/>
+                  </ProtectedRoute>
+                }
+              />
+
+               <Route
+                path="/audits/:id"
+                element={
+                  <ProtectedRoute>
+                    <AuditDetailPage/>
                   </ProtectedRoute>
                 }
               />

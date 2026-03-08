@@ -115,10 +115,13 @@ export const endpoints = {
   },
 
   // Audit
-audit: {
-  config: "/audit/config",
-  currentSlot: "/audit/current-slot"
-},
+  audit: {
+    config: "/audit/config",
+    currentSlot: "/audit/current-slot",
+    save: "/audit",
+    list: "/audit",
+    get: (id) => `/audit/${id}`,
+  },
   // Inspection Slots
  inspectionSlots: {
   list: "/inspection_slots",
