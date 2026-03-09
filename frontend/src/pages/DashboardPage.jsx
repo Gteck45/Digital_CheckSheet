@@ -9,10 +9,7 @@ import {
   Calendar,
   ExternalLink,
   Lock,
-  Eye,
-  Filter,
-  User,
-  History
+  Eye
 } from 'lucide-react';
 import Layout from '../components/Layout/Layout';
 import { useAuth } from '../context/AuthContext';
@@ -80,9 +77,6 @@ const DashboardPage = () => {
   });
   const [avgLatencyMs, setAvgLatencyMs] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [activities, setActivities] = useState([]);
-  const [activitiesLoading, setActivitiesLoading] = useState(true);
-  const [activityFilter, setActivityFilter] = useState('today');
 
   const fetchDashboardData = useCallback(async () => {
     try {
@@ -108,30 +102,11 @@ const DashboardPage = () => {
     }
   }, [isAdmin]);
 
-  const fetchActivitiesData = useCallback(async (filter = 'today') => {
-    try {
-      setActivitiesLoading(true);
-      const response = await apiService.get(`${endpoints.activity.list}?period=${filter}&limit=10`);
-      const activitiesData = response.data.data || [];
-      setActivities(activitiesData.logs || []);
-      setActivitiesLoading(false);
-    } catch (error) {
-      console.error('Error fetching activities data:', error);
-      setActivities([]);
-      setActivitiesLoading(false);
-    }
-  }, []);
-
   useEffect(() => {
     if (user) {
       fetchDashboardData();
-      fetchActivitiesData(activityFilter);
     }
-  }, [user, fetchDashboardData, activityFilter, fetchActivitiesData]);
-
-  const handleActivityFilterChange = useCallback((filter) => {
-    setActivityFilter(filter);
-  }, []);
+  }, [user, fetchDashboardData]);
 
   const currentDate = new Date();
   const greeting = () => {

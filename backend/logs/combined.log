@@ -1428,3 +1428,354 @@
 2026-03-09 14:30 +05:30: [0mGET /api/system/health [32m200[0m 5.762 ms - 269[0m
 2026-03-09 14:30 +05:30: [0mGET /api/system/network [36m304[0m 19.228 ms - -[0m
 2026-03-09 14:30 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.703 ms - 816[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/memory [32m200[0m 25.731 ms - 297[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/cpu [32m200[0m 29.787 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/performance [32m200[0m 31.418 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/performance [32m200[0m 69.031 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/memory [32m200[0m 17.889 ms - 297[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/cpu [32m200[0m 13.926 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/info [32m200[0m 36.123 ms - 501[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/processes [36m304[0m 38.562 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/network [36m304[0m 61.822 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/health [32m200[0m 43.197 ms - 269[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/process-stats [32m200[0m 30.127 ms - 816[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/memory [32m200[0m 29.482 ms - 297[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/cpu [32m200[0m 32.383 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/performance [32m200[0m 34.929 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/memory [32m200[0m 25.786 ms - 297[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/info [32m200[0m 4.505 ms - 500[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/cpu [32m200[0m 26.802 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/performance [32m200[0m 27.433 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/processes [36m304[0m 12.665 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/health [32m200[0m 9.432 ms - 114[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/network [36m304[0m 17.175 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.279 ms - 815[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/memory [32m200[0m 28.474 ms - 297[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/cpu [32m200[0m 30.700 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/performance [32m200[0m 33.297 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/memory [32m200[0m 25.301 ms - 297[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/info [32m200[0m 24.796 ms - 501[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/processes [36m304[0m 24.665 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/health [32m200[0m 24.871 ms - 269[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/cpu [32m200[0m 27.350 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/performance [32m200[0m 28.510 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/network [36m304[0m 14.405 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/process-stats [32m200[0m 12.162 ms - 816[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/memory [32m200[0m 18.926 ms - 300[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/cpu [32m200[0m 20.877 ms - -[0m
+2026-03-09 14:31 +05:30: [0mGET /api/system/performance [32m200[0m 23.445 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/memory [32m200[0m 6.328 ms - 300[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/info [32m200[0m 6.520 ms - 508[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/processes [36m304[0m 6.696 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/performance [32m200[0m 21.400 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/cpu [32m200[0m 8.194 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/health [32m200[0m 8.752 ms - 269[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/network [36m304[0m 14.650 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/process-stats [32m200[0m 12.953 ms - 815[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/memory [32m200[0m 24.311 ms - 296[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/cpu [32m200[0m 25.768 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/performance [32m200[0m 27.090 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/memory [32m200[0m 37.593 ms - 300[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/info [32m200[0m 38.002 ms - 497[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/processes [36m304[0m 42.984 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/health [32m200[0m 15.828 ms - 269[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/cpu [32m200[0m 39.970 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/performance [32m200[0m 42.560 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/network [36m304[0m 23.169 ms - -[0m
+2026-03-09 14:32 +05:30: [0mGET /api/system/process-stats [32m200[0m 20.573 ms - 816[0m
+2026-03-09 14:33 +05:30: [0mGET /api/system/cpu [32m200[0m 28.537 ms - -[0m
+2026-03-09 14:33 +05:30: [0mGET /api/system/performance [32m200[0m 30.659 ms - -[0m
+2026-03-09 14:33 +05:30: [0mGET /api/system/memory [32m200[0m 10.806 ms - 300[0m
+2026-03-09 14:33 +05:30: [0mGET /api/system/info [32m200[0m 17.480 ms - 497[0m
+2026-03-09 14:33 +05:30: [0mGET /api/system/processes [36m304[0m 15.289 ms - -[0m
+2026-03-09 14:33 +05:30: [0mGET /api/system/health [32m200[0m 13.830 ms - 269[0m
+2026-03-09 14:33 +05:30: [0mGET /api/system/network [36m304[0m 21.310 ms - -[0m
+2026-03-09 14:33 +05:30: [0mGET /api/system/process-stats [32m200[0m 19.985 ms - 816[0m
+2026-03-09 14:34 +05:30: [0mGET /api/system/cpu [32m200[0m 43.079 ms - -[0m
+2026-03-09 14:34 +05:30: [0mGET /api/system/performance [32m200[0m 45.797 ms - -[0m
+2026-03-09 14:34 +05:30: [0mGET /api/system/memory [32m200[0m 10.999 ms - 300[0m
+2026-03-09 14:34 +05:30: [0mGET /api/system/info [32m200[0m 9.757 ms - 512[0m
+2026-03-09 14:34 +05:30: [0mGET /api/system/processes [36m304[0m 9.809 ms - -[0m
+2026-03-09 14:34 +05:30: [0mGET /api/system/health [32m200[0m 16.573 ms - 269[0m
+2026-03-09 14:34 +05:30: [0mGET /api/system/network [36m304[0m 23.956 ms - -[0m
+2026-03-09 14:34 +05:30: [0mGET /api/system/process-stats [32m200[0m 17.974 ms - 816[0m
+2026-03-09 14:35 +05:30: [0mGET /api/system/performance [32m200[0m 35.508 ms - -[0m
+2026-03-09 14:35 +05:30: [0mGET /api/system/memory [32m200[0m 11.612 ms - 297[0m
+2026-03-09 14:35 +05:30: [0mGET /api/system/info [32m200[0m 10.895 ms - 499[0m
+2026-03-09 14:35 +05:30: [0mGET /api/system/cpu [32m200[0m 11.405 ms - -[0m
+2026-03-09 14:35 +05:30: [0mGET /api/system/processes [36m304[0m 9.726 ms - -[0m
+2026-03-09 14:35 +05:30: [0mGET /api/system/health [32m200[0m 9.610 ms - 269[0m
+2026-03-09 14:35 +05:30: [0mGET /api/system/network [36m304[0m 15.724 ms - -[0m
+2026-03-09 14:35 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.006 ms - 815[0m
+2026-03-09 14:36 +05:30: [0mGET /api/system/memory [32m200[0m 9.075 ms - 297[0m
+2026-03-09 14:36 +05:30: [0mGET /api/system/performance [32m200[0m 36.794 ms - -[0m
+2026-03-09 14:36 +05:30: [0mGET /api/system/info [32m200[0m 14.383 ms - 507[0m
+2026-03-09 14:36 +05:30: [0mGET /api/system/cpu [32m200[0m 11.686 ms - -[0m
+2026-03-09 14:36 +05:30: [0mGET /api/system/processes [36m304[0m 15.891 ms - -[0m
+2026-03-09 14:36 +05:30: [0mGET /api/system/health [32m200[0m 14.155 ms - 269[0m
+2026-03-09 14:36 +05:30: [0mGET /api/system/network [36m304[0m 22.430 ms - -[0m
+2026-03-09 14:36 +05:30: [0mGET /api/system/process-stats [32m200[0m 19.809 ms - 816[0m
+2026-03-09 14:37 +05:30: [0mGET /api/system/memory [32m200[0m 37.694 ms - 296[0m
+2026-03-09 14:37 +05:30: [0mGET /api/system/info [32m200[0m 52.830 ms - 511[0m
+2026-03-09 14:37 +05:30: [0mGET /api/system/processes [36m304[0m 22.157 ms - -[0m
+2026-03-09 14:37 +05:30: [0mGET /api/system/performance [32m200[0m 46.632 ms - -[0m
+2026-03-09 14:37 +05:30: [0mGET /api/system/cpu [32m200[0m 42.441 ms - -[0m
+2026-03-09 14:37 +05:30: [0mGET /api/system/health [32m200[0m 25.076 ms - 269[0m
+2026-03-09 14:37 +05:30: [0mGET /api/system/network [36m304[0m 46.916 ms - -[0m
+2026-03-09 14:37 +05:30: [0mGET /api/system/process-stats [32m200[0m 40.047 ms - 816[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/memory [32m200[0m 59.541 ms - 297[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/info [32m200[0m 80.281 ms - 499[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/processes [36m304[0m 78.634 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/health [32m200[0m 75.192 ms - 114[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/cpu [32m200[0m 63.153 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/performance [32m200[0m 76.076 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/network [36m304[0m 32.250 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/process-stats [32m200[0m 30.228 ms - 816[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/memory [32m200[0m 39.715 ms - 297[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/info [32m200[0m 38.040 ms - 500[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/processes [36m304[0m 13.655 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/cpu [32m200[0m 37.391 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/performance [32m200[0m 38.689 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/health [32m200[0m 12.899 ms - 114[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/network [36m304[0m 20.727 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/process-stats [32m200[0m 18.167 ms - 816[0m
+2026-03-09 14:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048045774 [32m200[0m 81.756 ms - 591[0m
+2026-03-09 14:50 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:50 +05:30: Access granted: User is super admin
+2026-03-09 14:50 +05:30: [0mGET /api/stats/dashboard [32m200[0m 41.141 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/memory [32m200[0m 36.492 ms - 297[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/info [32m200[0m 36.575 ms - 500[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/processes [36m304[0m 35.907 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/performance [32m200[0m 46.005 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/cpu [32m200[0m 38.915 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048046928 [32m200[0m 60.446 ms - 591[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/health [32m200[0m 17.473 ms - 114[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/network [36m304[0m 33.542 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/process-stats [32m200[0m 33.445 ms - 816[0m
+2026-03-09 14:50 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:50 +05:30: Access granted: User is super admin
+2026-03-09 14:50 +05:30: [0mGET /api/system/memory [32m200[0m 32.677 ms - 297[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/info [32m200[0m 23.890 ms - 500[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/processes [36m304[0m 19.711 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/health [32m200[0m 15.500 ms - 114[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/network [36m304[0m 19.660 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/cpu [32m200[0m 35.130 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/performance [32m200[0m 37.740 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048046934 [32m200[0m 59.241 ms - 591[0m
+2026-03-09 14:50 +05:30: [0mGET /api/system/process-stats [32m200[0m 7.156 ms - 816[0m
+2026-03-09 14:50 +05:30: [0mGET /api/stats/dashboard [32m200[0m 111.877 ms - -[0m
+2026-03-09 14:50 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:50 +05:30: Access granted: User is super admin
+2026-03-09 14:50 +05:30: [0mGET /api/stats/dashboard [32m200[0m 13.480 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/audit [33m404[0m 3.667 ms - 68[0m
+2026-03-09 14:50 +05:30: [0mGET /api/audit [33m404[0m 1.072 ms - 68[0m
+2026-03-09 14:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048049923 [32m200[0m 32.001 ms - 591[0m
+2026-03-09 14:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048049924 [32m200[0m 24.800 ms - 591[0m
+2026-03-09 14:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048056194 [32m200[0m 18.360 ms - 591[0m
+2026-03-09 14:50 +05:30: [0mGET /api/lines [36m304[0m 9.793 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048056195 [32m200[0m 23.110 ms - 591[0m
+2026-03-09 14:50 +05:30: [0mGET /api/lines [36m304[0m 8.594 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 7.231 ms - -[0m
+2026-03-09 14:50 +05:30: [0mGET /api/inspection_slots [32m200[0m 21.864 ms - -[0m
+2026-03-09 14:51 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048063574 [32m200[0m 17.308 ms - 591[0m
+2026-03-09 14:51 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 6.009 ms - -[0m
+2026-03-09 14:51 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048063575 [32m200[0m 16.494 ms - 591[0m
+2026-03-09 14:51 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 2.799 ms - -[0m
+2026-03-09 14:51 +05:30: [0mPOST /api/audit [33m404[0m 8.752 ms - 68[0m
+2026-03-09 14:51 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048083297 [32m200[0m 12.663 ms - 591[0m
+2026-03-09 14:51 +05:30: [0mGET /api/lines [36m304[0m 4.954 ms - -[0m
+2026-03-09 14:51 +05:30: [0mGET /api/lines [36m304[0m 4.047 ms - -[0m
+2026-03-09 14:51 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048083298 [32m200[0m 12.340 ms - 591[0m
+2026-03-09 14:51 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 5.325 ms - -[0m
+2026-03-09 14:51 +05:30: [0mGET /api/inspection_slots [36m304[0m 1.838 ms - -[0m
+2026-03-09 14:51 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048094195 [32m200[0m 19.768 ms - 591[0m
+2026-03-09 14:51 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 8.366 ms - -[0m
+2026-03-09 14:51 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048094196 [32m200[0m 16.802 ms - 591[0m
+2026-03-09 14:51 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 7.540 ms - -[0m
+2026-03-09 14:51 +05:30: [0mPOST /api/audit [33m404[0m 0.388 ms - 68[0m
+2026-03-09 14:52 +05:30: [0mPOST /api/audit [33m404[0m 0.667 ms - 68[0m
+2026-03-09 14:52 +05:30: [0mPOST /api/audit [33m404[0m 0.594 ms - 68[0m
+2026-03-09 14:53 +05:30: [0mGET /api/lines [36m304[0m 5.494 ms - -[0m
+2026-03-09 14:53 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048202486 [32m200[0m 18.292 ms - 591[0m
+2026-03-09 14:53 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048202488 [32m200[0m 13.419 ms - 591[0m
+2026-03-09 14:53 +05:30: [0mGET /api/lines [36m304[0m 7.005 ms - -[0m
+2026-03-09 14:53 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 6.062 ms - -[0m
+2026-03-09 14:53 +05:30: [0mGET /api/inspection_slots [36m304[0m 4.658 ms - -[0m
+2026-03-09 14:53 +05:30: [0mGET /api/audit [33m404[0m 0.381 ms - 68[0m
+2026-03-09 14:53 +05:30: [0mGET /api/audit [33m404[0m 0.387 ms - 68[0m
+2026-03-09 14:53 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048228885 [32m200[0m 18.882 ms - 591[0m
+2026-03-09 14:53 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048228886 [32m200[0m 15.032 ms - 591[0m
+2026-03-09 14:54 +05:30: [0mGET /api/lines [36m304[0m 5.706 ms - -[0m
+2026-03-09 14:54 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048252981 [32m200[0m 18.671 ms - 591[0m
+2026-03-09 14:54 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048252983 [32m200[0m 17.716 ms - 591[0m
+2026-03-09 14:54 +05:30: [0mGET /api/lines [36m304[0m 2.242 ms - -[0m
+2026-03-09 14:54 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 2.269 ms - -[0m
+2026-03-09 14:54 +05:30: [0mGET /api/inspection_slots [36m304[0m 3.190 ms - -[0m
+2026-03-09 14:54 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048267791 [32m200[0m 18.295 ms - 591[0m
+2026-03-09 14:54 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 9.942 ms - -[0m
+2026-03-09 14:54 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048267792 [32m200[0m 17.841 ms - 591[0m
+2026-03-09 14:54 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [36m304[0m 2.249 ms - -[0m
+2026-03-09 14:54 +05:30: [0mPOST /api/audit [33m404[0m 0.629 ms - 68[0m
+2026-03-09 14:56 +05:30: [0mPOST /api/auth/logout [33m401[0m 5.221 ms - 81[0m
+2026-03-09 14:56 +05:30: [0mPOST /api/auth/login [32m200[0m 399.846 ms - 666[0m
+2026-03-09 14:56 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048378435 [32m200[0m 14.158 ms - 591[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/memory [32m200[0m 6.923 ms - 297[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/cpu [32m200[0m 52.382 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/performance [32m200[0m 54.524 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/info [32m200[0m 18.128 ms - 523[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/processes [36m304[0m 20.702 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/health [32m200[0m 10.877 ms - 114[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/network [36m304[0m 67.263 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/process-stats [32m200[0m 81.437 ms - 816[0m
+2026-03-09 14:56 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:56 +05:30: Access granted: User is super admin
+2026-03-09 14:56 +05:30: [0mGET /api/system/memory [32m200[0m 22.928 ms - 297[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/processes [36m304[0m 53.730 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048378451 [32m200[0m 96.912 ms - 591[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/cpu [32m200[0m 26.433 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/performance [32m200[0m 56.813 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/info [32m200[0m 13.813 ms - 525[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/health [32m200[0m 23.601 ms - 114[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/network [36m304[0m 31.844 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/process-stats [32m200[0m 29.053 ms - 816[0m
+2026-03-09 14:56 +05:30: [0mGET /api/stats/dashboard [32m200[0m 150.433 ms - -[0m
+2026-03-09 14:56 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:56 +05:30: Access granted: User is super admin
+2026-03-09 14:56 +05:30: [0mGET /api/stats/dashboard [32m200[0m 15.216 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/memory [32m200[0m 28.183 ms - 297[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/cpu [32m200[0m 26.444 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/system/performance [32m200[0m 27.526 ms - -[0m
+2026-03-09 14:56 +05:30: [0mGET /api/audit [33m404[0m 0.627 ms - 68[0m
+2026-03-09 14:56 +05:30: [0mGET /api/audit [33m404[0m 0.692 ms - 68[0m
+2026-03-09 14:56 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048396383 [32m200[0m 22.347 ms - 591[0m
+2026-03-09 14:56 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773048396386 [32m200[0m 21.528 ms - 591[0m
+2026-03-09 14:58 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:58 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:58 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:58 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:58 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:58 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:58 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:58 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:58 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:58 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:58 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:58 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:58 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:58 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:58 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:58 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:58 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:58 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:58 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:58 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:58 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:58 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:58 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:58 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:58 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:58 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:58 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:58 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:58 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:58 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:58 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:58 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:58 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:58 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:58 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:58 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:58 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:58 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:58 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:58 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:58 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:58 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:58 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:58 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:58 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:58 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:58 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:58 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:58 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:58 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:58 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:58 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:58 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:58 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:58 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:58 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:58 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:58 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:58 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:58 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:58 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:58 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:58 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:58 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:58 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:58 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:58 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:58 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:58 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:58 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:58 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:58 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:58 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:58 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:58 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:58 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:58 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:58 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:58 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:58 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:58 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:58 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:58 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:58 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:58 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:58 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:58 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:58 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:58 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:58 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:58 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:59 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:59 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:59 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:59 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:59 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:59 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:59 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:59 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:59 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:59 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:59 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:59 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:59 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:59 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:59 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:59 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:59 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:59 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:59 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:59 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:59 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:59 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:59 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:59 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:59 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:59 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-09 14:59 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-09 14:59 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-09 14:59 +05:30: Error: Route.get() requires a callback function but got a [object Undefined]
+2026-03-09 14:59 +05:30:     at Route.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\route.js:216:15)
+2026-03-09 14:59 +05:30:     at proto.<computed> [as get] (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\node_modules\express\lib\router\index.js:521:19)
+2026-03-09 14:59 +05:30:     at Object.<anonymous> (C:\Users\DELL\Downloads\CMSCRM (1)\CMSCRM\backend\src\routes\activityRoutes.js:8:8)
+2026-03-09 14:59 +05:30:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2026-03-09 14:59 +05:30:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+2026-03-09 14:59 +05:30:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+2026-03-09 14:59 +05:30:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+2026-03-09 14:59 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2026-03-09 14:59 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2026-03-09 14:59 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
