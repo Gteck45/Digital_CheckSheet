@@ -9,6 +9,7 @@ import React, {
 import axios from "axios";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
+import { showToast } from "../utils/toast";
 
 const AuthContext = createContext();
 
@@ -115,19 +116,7 @@ export const AuthProvider = ({ children }) => {
 
       // Only show toast if requested (to prevent multiple toasts)
       if (showToast) {
-        toast.success("Logged out successfully", {
-          style: {
-            background: "#1f2937", // dark gray background
-            color: "#e5e7eb", // light text
-            border: "1px solid #374151",
-            borderRadius: "8px",
-            padding: "10px 14px",
-          },
-          iconTheme: {
-            primary: "#22c55e", // green success icon
-            secondary: "#1f2937",
-          },
-        });
+        showToast.success("Logged out successfully");
       }
     },
     [isLoggingOut, token]
@@ -153,39 +142,13 @@ export const AuthProvider = ({ children }) => {
       setUser(userData);
       setIsLoggingOut(false); // Reset logout flag on successful login
 
-      // toast.success(`Welcome back, ${userData.username}!`);
-      toast.success(`Welcome back, ${userData?.username || "User"}!`, {
-        style: {
-          background: "#1f2937", // dark gray background
-          color: "#e5e7eb", // light text
-          border: "1px solid #374151",
-          borderRadius: "8px",
-          padding: "10px 14px",
-        },
-        iconTheme: {
-          primary: "#22c55e", // green success icon
-          secondary: "#1f2937",
-        },
-      });
+      showToast.success(`Welcome back, ${userData?.username || "User"}!`);
 
       // Return user data and ensure state is set
       return { success: true, user: userData, token: authToken };
     } catch (error) {
       const message = error.response?.data?.message || "Login failed";
-      // toast.error(message);
-      toast.error(message || "Something went wrong", {
-        style: {
-          background: "#1f2937", // dark gray background
-          color: "#fca5a5", // soft red text for error
-          border: "1px solid #4b5563",
-          borderRadius: "8px",
-          padding: "10px 14px",
-        },
-        iconTheme: {
-          primary: "#ef4444", // red error icon
-          secondary: "#1f2937", // matches dark bg
-        },
-      });
+      showToast.error(message || "Something went wrong");
 
       return { success: false, message };
     }
@@ -279,35 +242,11 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await axios.put("/auth/profile", profileData);
       setUser(response.data.user);
-      toast.success("Profile updated successfully", {
-        style: {
-          background: "#1f2937", // dark gray background
-          color: "#e5e7eb", // light text
-          border: "1px solid #374151",
-          borderRadius: "8px",
-          padding: "10px 14px",
-        },
-        iconTheme: {
-          primary: "#22c55e", // green success icon
-          secondary: "#1f2937",
-        },
-      });
+      showToast.success("Profile updated successfully");
       return { success: true };
     } catch (error) {
       const message = error.response?.data?.message || "Profile update failed";
-      toast.error(message || "Something went wrong", {
-        style: {
-          background: "#1f2937", // dark gray background
-          color: "#fca5a5", // soft red text for error
-          border: "1px solid #4b5563",
-          borderRadius: "8px",
-          padding: "10px 14px",
-        },
-        iconTheme: {
-          primary: "#ef4444", // red error icon
-          secondary: "#1f2937", // matches dark bg
-        },
-      });
+      showToast.error(message || "Something went wrong");
 
       return { success: false, message };
     }
@@ -319,35 +258,11 @@ export const AuthProvider = ({ children }) => {
         currentPassword,
         newPassword,
       });
-      toast.success("Password changed successfully", {
-        style: {
-          background: "#1f2937", // dark gray background
-          color: "#e5e7eb", // light text
-          border: "1px solid #374151",
-          borderRadius: "8px",
-          padding: "10px 14px",
-        },
-        iconTheme: {
-          primary: "#22c55e", // green success icon
-          secondary: "#1f2937",
-        },
-      });
+      showToast.success("Password changed successfully");
       return { success: true };
     } catch (error) {
       const message = error.response?.data?.message || "Password change failed";
-      toast.error(message || "Something went wrong", {
-        style: {
-          background: "#1f2937", // dark gray background
-          color: "#fca5a5", // soft red text for error
-          border: "1px solid #4b5563",
-          borderRadius: "8px",
-          padding: "10px 14px",
-        },
-        iconTheme: {
-          primary: "#ef4444", // red error icon
-          secondary: "#1f2937", // matches dark bg
-        },
-      });
+      showToast.error(message || "Something went wrong");
 
       return { success: false, message };
     }

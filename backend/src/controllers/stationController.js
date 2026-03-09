@@ -67,7 +67,16 @@ class StationController {
         });
       }
 
-      await Station.create(name, status);
+      // Check if station with same name already exists
+      const existingStation = await Station.getByName(name.trim());
+      if (existingStation) {
+        return res.status(409).json({
+          success: false,
+          message: 'Station with this name already exists'
+        });
+      }
+
+      await Station.create(name.trim(), status);
 
       res.json({
         success: true,
@@ -90,10 +99,30 @@ class StationController {
     try {
 
       const { name, status } = req.body;
+      const { id } = req.params;
+
+      // Validate input
+      if (!name && status === undefined) {
+        return res.status(400).json({
+          success: false,
+          message: 'At least one field (name or status) is required'
+        });
+      }
+
+      // If name is being updated, check for duplicates
+      if (name) {
+        const existingStation = await Station.getByName(name.trim());
+        if (existingStation && existingStation.id != id) {
+          return res.status(409).json({
+            success: false,
+            message: 'Station with this name already exists'
+          });
+        }
+      }
 
       await Station.update(
-        req.params.id,
-        name,
+        id,
+        name ? name.trim() : undefined,
         status
       );
 
@@ -118,6 +147,7 @@ class StationController {
     try {
 
       const { status } = req.body;
+      const { id } = req.params;
 
       if (!['active','inactive'].includes(status)) {
         return res.status(400).json({
@@ -126,10 +156,16 @@ class StationController {
         });
       }
 
-      await Station.changeStatus(
-        req.params.id,
-        status
-      );
+      // Check if station exists
+      const station = await Station.getById(id);
+      if (!station) {
+        return res.status(404).json({
+          success: false,
+          message: 'Station not found'
+        });
+      }
+
+      await Station.changeStatus(id, status);
 
       res.json({
         success: true,
@@ -151,7 +187,18 @@ class StationController {
 
     try {
 
-      await Station.hardDelete(req.params.id);
+      const { id } = req.params;
+
+      // Check if station exists
+      const station = await Station.getById(id);
+      if (!station) {
+        return res.status(404).json({
+          success: false,
+          message: 'Station not found'
+        });
+      }
+
+      await Station.hardDelete(id);
 
       res.json({
         success: true,

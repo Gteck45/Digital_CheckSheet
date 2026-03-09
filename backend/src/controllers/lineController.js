@@ -67,7 +67,16 @@ class LineController {
         });
       }
 
-      await Line.create(name, status);
+      // Check if line with same name already exists
+      const existingLine = await Line.getByName(name.trim());
+      if (existingLine) {
+        return res.status(409).json({
+          success: false,
+          message: 'Line with this name already exists'
+        });
+      }
+
+      await Line.create(name.trim(), status);
 
       res.json({
         success: true,
@@ -90,10 +99,30 @@ class LineController {
     try {
 
       const { name, status } = req.body;
+      const { id } = req.params;
+
+      // Validate input
+      if (!name && status === undefined) {
+        return res.status(400).json({
+          success: false,
+          message: 'At least one field (name or status) is required'
+        });
+      }
+
+      // If name is being updated, check for duplicates
+      if (name) {
+        const existingLine = await Line.getByName(name.trim());
+        if (existingLine && existingLine.id != id) {
+          return res.status(409).json({
+            success: false,
+            message: 'Line with this name already exists'
+          });
+        }
+      }
 
       await Line.update(
-        req.params.id,
-        name,
+        id,
+        name ? name.trim() : undefined,
         status
       );
 
@@ -118,6 +147,7 @@ class LineController {
     try {
 
       const { status } = req.body;
+      const { id } = req.params;
 
       if (!['active', 'inactive'].includes(status)) {
         return res.status(400).json({
@@ -126,10 +156,16 @@ class LineController {
         });
       }
 
-      await Line.changeStatus(
-        req.params.id,
-        status
-      );
+      // Check if line exists
+      const line = await Line.getById(id);
+      if (!line) {
+        return res.status(404).json({
+          success: false,
+          message: 'Line not found'
+        });
+      }
+
+      await Line.changeStatus(id, status);
 
       res.json({
         success: true,
@@ -151,7 +187,18 @@ class LineController {
 
     try {
 
-      await Line.hardDelete(req.params.id);
+      const { id } = req.params;
+
+      // Check if line exists
+      const line = await Line.getById(id);
+      if (!line) {
+        return res.status(404).json({
+          success: false,
+          message: 'Line not found'
+        });
+      }
+
+      await Line.hardDelete(id);
 
       res.json({
         success: true,

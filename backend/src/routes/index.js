@@ -17,6 +17,7 @@ const inspection_slotsRoutes = require('./inspectionSlotsRoutes');
 const templateRoutes = require('./templateRoutes');
 const templateSubmissionRoutes = require('./templateSubmissionRoutes');
 const auditRoutes = require('./auditRoutes')
+const activityRoutes = require('./activityRoutes');
 
 // API version and documentation info
 router.get("/", (req, res) => {
@@ -71,6 +72,7 @@ router.use("/inspection_slots", inspection_slotsRoutes); // ✅ ADD THIS
 router.use("/templates", templateRoutes);
 router.use("/submissions", templateSubmissionRoutes);
 router.use("/audit", auditRoutes);
+router.use("/activity", activityRoutes);
 
 
 // API documentation placeholder

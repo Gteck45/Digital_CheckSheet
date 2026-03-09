@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import { apiService, endpoints } from "../utils/api";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
+import { showToast } from "../utils/toast";
 import TemplateBuilder from "../template_builder/TemplateBuilder";
 
 function normalizeListResponse(res) {
@@ -58,7 +59,7 @@ export default function TemplateForm() {
     } catch (e) {
       console.error(e);
       setEntityList([]);
-      toast.error("Failed to load entities");
+      showToast.error("Failed to load entities");
     }
   }, []);
 
@@ -83,7 +84,7 @@ export default function TemplateForm() {
       await loadEntities(data.entity_type || "line");
     } catch (e) {
       console.error(e);
-      toast.error("Failed to load template");
+      showToast.error("Failed to load template");
       navigate("/templates");
     } finally {
       setLoading(false);
@@ -106,10 +107,10 @@ export default function TemplateForm() {
   const submit = async (e) => {
     e?.preventDefault?.();
 
-    if (!name.trim()) return toast.error("Template name required");
-    if (!entityType) return toast.error("Entity type required");
-    if (!entityId) return toast.error("Select entity required");
-    if (!schema?.fields?.length) return toast.error("Add at least 1 field");
+    if (!name.trim()) return showToast.error("Template name required");
+    if (!entityType) return showToast.error("Entity type required");
+    if (!entityId) return showToast.error("Select entity required");
+    if (!schema?.fields?.length) return showToast.error("Add at least 1 field");
 
     try {
       setLoading(true);
@@ -123,16 +124,16 @@ export default function TemplateForm() {
 
       if (isEdit) {
         await apiService.put(endpoints.templates.update(id), payload);
-        toast.success("Template updated");
+        showToast.success("Template updated");
       } else {
         await apiService.post(endpoints.templates.create, payload);
-        toast.success("Template created");
+        showToast.success("Template created");
       }
 
       navigate("/templates");
     } catch (e) {
       console.error(e);
-      toast.error("Save failed");
+      showToast.error("Save failed");
     } finally {
       setLoading(false);
     }
