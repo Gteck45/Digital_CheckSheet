@@ -4,6 +4,7 @@ import Layout from "../components/Layout/Layout";
 import { apiService, endpoints } from "../utils/api";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { showToast } from "../utils/toast";
 import { FileText, Plus, Search, Trash2, Edit, Database } from "lucide-react";
 import LoadingSpinner from "../components/LoadingSpinner";
 
@@ -37,15 +38,7 @@ export default function TemplatesPage() {
       setTemplates(arr);
     } catch (e) {
       console.error(e);
-      toast.error("Failed to load templates", {
-        style: {
-          background: "#1f2937",
-          color: "#fca5a5",
-          border: "1px solid #4b5563",
-          borderRadius: "8px",
-        },
-        iconTheme: { primary: "#ef4444", secondary: "#1f2937" },
-      });
+      showToast.error("Failed to load templates");
       setTemplates([]);
     } finally {
       setLoading(false);
@@ -80,26 +73,12 @@ export default function TemplatesPage() {
       // Backend route: PATCH /:id/soft-delete
       await apiService.patch(endpoints.templates.softDelete(t.id));
 
-      toast.success("Template deleted successfully", {
-        style: {
-          background: "#1f2937",
-          color: "#e5e7eb",
-          border: "1px solid #374151",
-        },
-        iconTheme: { primary: "#3b82f6", secondary: "#1f2937" },
-      });
+      showToast.success("Template deleted successfully");
 
       load();
     } catch (e) {
       console.error(e);
-      toast.error("Failed to delete template", {
-        style: {
-          background: "#1f2937",
-          color: "#f87171",
-          border: "1px solid #4b5563",
-        },
-        iconTheme: { primary: "#f87171", secondary: "#1f2937" },
-      });
+      showToast.error("Failed to delete template");
     }
   };
 

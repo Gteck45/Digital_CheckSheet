@@ -10,7 +10,7 @@ class Line {
       VALUES (?, ?)
     `;
 
-    return db.execute(sql, [name, status]);
+    return db.execute(sql, [name.trim(), status]);
   }
 
 
@@ -42,6 +42,21 @@ class Line {
   }
 
 
+  // Get By Name
+  static async getByName(name) {
+
+    const sql = `
+      SELECT *
+      FROM \`lines\`
+      WHERE name = ?
+    `;
+
+    const rows = await db.execute(sql, [name]);
+
+    return rows[0] || null;
+  }
+
+
   // Update
   static async update(id, name, status) {
 
@@ -50,7 +65,7 @@ class Line {
 
     if (name !== undefined) {
       set.push('name = ?');
-      params.push(name);
+      params.push(name.trim());
     }
 
     if (status !== undefined) {

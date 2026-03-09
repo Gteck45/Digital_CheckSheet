@@ -268,14 +268,54 @@ function App() {
 
             {/* Global Toast Notifications */}
             <Toaster
-              position="top-right"
+              position="bottom-center"
               toastOptions={{
                 duration: 4000,
                 style: {
-                  background: "var(--toast-bg)",
-                  color: "var(--toast-color)",
+                  background: "var(--toast-bg, #1f2937)",
+                  color: "var(--toast-color, #e5e7eb)",
+                  border: "1px solid var(--toast-border, #374151)",
+                  borderRadius: "8px",
+                  padding: "12px 16px",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)",
+                  maxWidth: "400px",
+                  textAlign: "center",
                 },
-                className: "dark:bg-gray-800 dark:text-white",
+                success: {
+                  iconTheme: {
+                    primary: "#22c55e",
+                    secondary: "#1f2937",
+                  },
+                  style: {
+                    background: "#1f2937",
+                    color: "#e5e7eb",
+                    border: "1px solid #22c55e",
+                  },
+                },
+                error: {
+                  iconTheme: {
+                    primary: "#ef4444",
+                    secondary: "#1f2937",
+                  },
+                  style: {
+                    background: "#1f2937",
+                    color: "#e5e7eb",
+                    border: "1px solid #ef4444",
+                  },
+                },
+                loading: {
+                  iconTheme: {
+                    primary: "#3b82f6",
+                    secondary: "#1f2937",
+                  },
+                  style: {
+                    background: "#1f2937",
+                    color: "#e5e7eb",
+                    border: "1px solid #3b82f6",
+                  },
+                },
               }}
             />
           </div>

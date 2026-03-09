@@ -6,7 +6,13 @@ import {
   Activity,
   TrendingUp,
   Clock,
-  Calendar
+  Calendar,
+  ExternalLink,
+  Lock,
+  Eye,
+  Filter,
+  User,
+  History
 } from 'lucide-react';
 import Layout from '../components/Layout/Layout';
 import { useAuth } from '../context/AuthContext';
@@ -64,8 +70,6 @@ const StatCard = ({ title, value, icon: Icon, trend, color = 'blue', suffix = ''
   );
 };
 
-
-
 const DashboardPage = () => {
   const { user, isAdmin } = useAuth();
   const [stats, setStats] = useState({
@@ -76,6 +80,9 @@ const DashboardPage = () => {
   });
   const [avgLatencyMs, setAvgLatencyMs] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [activities, setActivities] = useState([]);
+  const [activitiesLoading, setActivitiesLoading] = useState(true);
+  const [activityFilter, setActivityFilter] = useState('today');
 
   const fetchDashboardData = useCallback(async () => {
     try {
@@ -101,11 +108,30 @@ const DashboardPage = () => {
     }
   }, [isAdmin]);
 
+  const fetchActivitiesData = useCallback(async (filter = 'today') => {
+    try {
+      setActivitiesLoading(true);
+      const response = await apiService.get(`${endpoints.activity.list}?period=${filter}&limit=10`);
+      const activitiesData = response.data.data || [];
+      setActivities(activitiesData.logs || []);
+      setActivitiesLoading(false);
+    } catch (error) {
+      console.error('Error fetching activities data:', error);
+      setActivities([]);
+      setActivitiesLoading(false);
+    }
+  }, []);
+
   useEffect(() => {
     if (user) {
       fetchDashboardData();
+      fetchActivitiesData(activityFilter);
     }
-  }, [user, fetchDashboardData]);
+  }, [user, fetchDashboardData, activityFilter, fetchActivitiesData]);
+
+  const handleActivityFilterChange = useCallback((filter) => {
+    setActivityFilter(filter);
+  }, []);
 
   const currentDate = new Date();
   const greeting = () => {
@@ -205,6 +231,50 @@ const DashboardPage = () => {
               </div>
             )}
           </>
+        )}
+
+        {/* Quick Access - Only visible to Admin and Super Admin */}
+        {isAdmin() && (
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <Eye className="h-5 w-5 sm:h-6 sm:w-6 text-primary-600 dark:text-primary-400" />
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">Quick Access</h3>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+              {[
+                { name: 'Users', path: '/users', icon: Users, color: 'blue' },
+                { name: 'Roles', path: '/roles', icon: Shield, color: 'green' },
+                { name: 'Pages', path: '/pages', icon: FileText, color: 'purple' },
+                { name: 'Templates', path: '/templates', icon: FileText, color: 'orange' },
+                { name: 'Audit List', path: '/audit-list', icon: Activity, color: 'red' },
+                { name: 'Reports', path: '/manage_report', icon: TrendingUp, color: 'indigo' },
+              ].map((item) => {
+                const IconComponent = item.icon;
+                const colorClasses = {
+                  blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',
+                  green: 'from-green-500 to-green-600 hover:from-green-600 hover:to-green-700',
+                  purple: 'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',
+                  orange: 'from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700',
+                  red: 'from-red-500 to-red-600 hover:from-red-600 hover:to-red-700',
+                  indigo: 'from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700'
+                };
+
+                return (
+                  <button
+                    key={item.path}
+                    onClick={() => window.location.href = item.path}
+                    className={`bg-gradient-to-br ${colorClasses[item.color]} text-white p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-1 group`}
+                  >
+                    <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                    <span className="text-xs sm:text-sm font-medium block text-center leading-tight">
+                      {item.name}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         )}
 
         {/* Enhanced System Monitoring */}

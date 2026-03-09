@@ -7,20 +7,42 @@ class ModelMaster {
     return db.execute(
       `INSERT INTO models (brand_id, name, status)
        VALUES (?, ?, ?)`,
-      [brand_id, name, status]
+      [brand_id, name.trim(), status]
     );
   }
 
   static getAll() {
 
     return db.execute(`
-      SELECT 
+      SELECT
         m.*,
         b.name AS brand_name
       FROM models m
       JOIN brands b ON b.id = m.brand_id
       ORDER BY m.id DESC
     `);
+  }
+
+  static getById(id) {
+
+    return db.execute(`
+      SELECT
+        m.*,
+        b.name AS brand_name
+      FROM models m
+      JOIN brands b ON b.id = m.brand_id
+      WHERE m.id = ?
+    `, [id]);
+  }
+
+  static getByName(name) {
+
+    return db.execute(
+      `SELECT *
+       FROM models
+       WHERE name = ?`,
+      [name]
+    );
   }
 
   static getByBrand(brandId) {
@@ -40,7 +62,7 @@ class ModelMaster {
       `UPDATE models
        SET brand_id = ?, name = ?, status = ?
        WHERE id = ?`,
-      [brand_id, name, status, id]
+      [brand_id, name.trim(), status, id]
     );
   }
 

@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Database, ArrowLeft } from "lucide-react";
 import LoadingSpinner from "../components/LoadingSpinner";
 import toast from "react-hot-toast";
+import { showToast } from "../utils/toast";
 
 function parseResponseJson(val) {
   if (!val) return null;
@@ -36,7 +37,7 @@ export default function TemplateSubmissions() {
 
       setData(Array.isArray(arr) ? arr : []);
     } catch (err) {
-      toast.error("Failed to load submissions");
+      showToast.error("Failed to load submissions");
       setData([]);
     } finally {
       setLoading(false);

@@ -6,7 +6,7 @@ class Brand {
     return db.execute(
       `INSERT INTO brands (name, status)
        VALUES (?, ?)`,
-      [name, status]
+      [name.trim(), status]
     );
   }
 
@@ -18,12 +18,30 @@ class Brand {
     );
   }
 
+  static getById(id) {
+    return db.execute(
+      `SELECT *
+       FROM brands
+       WHERE id = ?`,
+      [id]
+    );
+  }
+
+  static getByName(name) {
+    return db.execute(
+      `SELECT *
+       FROM brands
+       WHERE name = ?`,
+      [name]
+    );
+  }
+
   static update(id, name, status) {
     return db.execute(
       `UPDATE brands
        SET name = ?, status = ?
        WHERE id = ?`,
-      [name, status, id]
+      [name.trim(), status, id]
     );
   }
 

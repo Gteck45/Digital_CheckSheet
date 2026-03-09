@@ -46,31 +46,144 @@ A modern, comprehensive Content Management System built with Node.js, React 19, 
 - **Enhanced UX**: Seamless navigation with rich visual feedback
 - **Form Validation**: Client-side validation with real-time feedback
 
-## 🏗️ Architecture
+## 🏗️ Project Structure
 
 ```
 CMSCRM/
-├── backend/                 # Node.js/Express API Server
+├── backend/                          # Node.js/Express API Server
 │   ├── src/
-│   │   ├── config/         # Database configuration
-│   │   ├── controllers/    # API controllers
-│   │   ├── middleware/     # Custom middleware
-│   │   ├── models/         # Database models
-│   │   ├── routes/         # API routes
-│   │   ├── seed/          # Database seeding
-│   │   └── utils/         # Utility functions
-│   ├── uploads/           # File uploads directory
-│   ├── exports/           # Export files directory
-│   └── server.js          # Main server file
-├── frontend/              # React/Vite Frontend
+│   │   ├── config/
+│   │   │   └── db.js                # Database configuration
+│   │   ├── controllers/             # API controllers
+│   │   │   ├── auditController.js
+│   │   │   ├── authController.js
+│   │   │   ├── brandController.js
+│   │   │   ├── exportController.js
+│   │   │   ├── inspectionSlotController.js
+│   │   │   ├── lineController.js
+│   │   │   ├── modelController.js
+│   │   │   ├── pageController.js
+│   │   │   ├── roleController.js
+│   │   │   ├── stationController.js
+│   │   │   ├── statsController.js
+│   │   │   ├── systemController.js
+│   │   │   ├── templateController.js
+│   │   │   ├── templateSubmissionController.js
+│   │   │   └── userController.js
+│   │   ├── middleware/              # Custom middleware
+│   │   │   ├── activityLogger.js
+│   │   │   ├── auth.js
+│   │   │   ├── errorHandler.js
+│   │   │   ├── rbac.js
+│   │   │   └── validation.js
+│   │   ├── migrations/              # Database migrations
+│   │   │   ├── add_page_hierarchy.js
+│   │   │   └── create_role_pages_order.js
+│   │   ├── models/                  # Database models
+│   │   │   ├── activityLog.js
+│   │   │   ├── brandModel.js
+│   │   │   ├── index.js
+│   │   │   ├── inspectionSlotModel.js
+│   │   │   ├── lineModel.js
+│   │   │   ├── loginActivity.js
+│   │   │   ├── modelMaster.js
+│   │   │   ├── page.js
+│   │   │   ├── role.js
+│   │   │   ├── stationModel.js
+│   │   │   ├── templateModel.js
+│   │   │   ├── templateSubmissionModel.js
+│   │   │   ├── user.js
+│   │   │   └── userRole.js
+│   │   ├── routes/                  # API routes
+│   │   │   ├── auditRoutes.js
+│   │   │   ├── authRoutes.js
+│   │   │   ├── brandRoutes.js
+│   │   │   ├── exportRoutes.js
+│   │   │   ├── index.js
+│   │   │   ├── inspectionSlotsRoutes.js
+│   │   │   ├── lineRoutes.js
+│   │   │   ├── modelRoutes.js
+│   │   │   ├── pageRoutes.js
+│   │   │   ├── roleRoutes.js
+│   │   │   ├── stationRoutes.js
+│   │   │   ├── statsRoutes.js
+│   │   │   ├── systemRoutes.js
+│   │   │   ├── templateRoutes.js
+│   │   │   ├── templateSubmissionRoutes.js
+│   │   │   └── userRoutes.js
+│   │   ├── seed/                    # Database seeding
+│   │   │   └── seed.js
+│   │   └── utils/                   # Utility functions
+│   │       ├── enhancedSystemMonitor.js
+│   │       ├── exporters.js
+│   │       ├── paginator.js
+│   │       └── slotStatus.js
+│   ├── uploads/                     # File uploads directory
+│   ├── exports/                     # Export files directory
+│   ├── logs/                        # Application logs
+│   ├── .env                         # Environment variables
+│   ├── check_db.js                  # Database connection checker
+│   ├── ecosystem.config.js          # PM2 configuration
+│   ├── package.json                 # Backend dependencies
+│   ├── PM2_GUIDE.md                 # PM2 usage guide
+│   ├── README.md                    # Backend documentation
+│   ├── server.js                    # Main server file
+│   └── simple-server.js             # Simple server for testing
+├── frontend/                        # React/Vite Frontend
 │   ├── src/
-│   │   ├── components/    # Reusable components
-│   │   ├── pages/         # Page components
-│   │   ├── context/       # React contexts
-│   │   ├── hooks/         # Custom hooks
-│   │   └── utils/         # Utility functions
-│   └── public/            # Static assets
-└── README.md              # This file
+│   │   ├── components/              # Reusable components
+│   │   │   ├── EnhancedSystemInformation.jsx
+│   │   │   ├── EnhancedSystemPerformance.jsx
+│   │   │   ├── Layout/
+│   │   │   ├── LoadingSpinner.jsx
+│   │   │   ├── PageArrangement.jsx
+│   │   │   ├── UserPagesModal.jsx
+│   │   │   └── ZoomableIframeModal.jsx
+│   │   ├── pages/                   # Page components
+│   │   │   ├── AuditListPage.jsx
+│   │   │   ├── audits/
+│   │   │   ├── BrandsPage.jsx
+│   │   │   ├── DashboardPage.jsx
+│   │   │   ├── ExternalPage.jsx
+│   │   │   ├── IframeTestPage.jsx
+│   │   │   ├── InspectionSlotsPage.jsx
+│   │   │   ├── LinesPage.jsx
+│   │   │   ├── LoginPage.jsx
+│   │   │   ├── ManageReportsPage.jsx
+│   │   │   ├── ModelsPage.jsx
+│   │   │   ├── NotFoundPage.jsx
+│   │   │   ├── PagesPage.jsx
+│   │   │   ├── RolesPage.jsx
+│   │   │   ├── SlotStatusPage.jsx
+│   │   │   ├── StationsPage.jsx
+│   │   │   └── UsersPage.jsx
+│   │   ├── context/                 # React contexts
+│   │   │   ├── AuthContext.jsx
+│   │   │   └── ThemeContext.jsx
+│   │   ├── hooks/                   # Custom hooks
+│   │   │   └── useApi.js
+│   │   ├── template_builder/        # Template builder components
+│   │   ├── utils/                   # Utility functions
+│   │   ├── App.css                  # Main application styles
+│   │   ├── App.jsx                  # Main App component
+│   │   ├── index.css                # Global styles
+│   │   └── main.jsx                 # Application entry point
+│   ├── public/                      # Static assets
+│   ├── .env                         # Frontend environment variables
+│   ├── ecosystem.config.cjs         # PM2 frontend configuration
+│   ├── eslint.config.js             # ESLint configuration
+│   ├── index.html                   # HTML template
+│   ├── package.json                 # Frontend dependencies
+│   ├── postcss.config.js            # PostCSS configuration
+│   ├── README.md                    # Frontend documentation
+│   ├── start-dev.cjs                # Development startup script
+│   ├── tailwind.config.js           # Tailwind CSS configuration
+│   └── vite.config.js               # Vite configuration
+├── logs/                            # Global logs directory
+├── ecosystem.config.cjs             # Root PM2 configuration
+├── fix_pm2.bat                      # PM2 troubleshooting script
+├── README.md                        # This file
+└── .git/                            # Git repository
 ```
 
 ## 📋 Prerequisites
@@ -140,7 +253,7 @@ npm install
 npm run dev
 ```
 
-## � Demo Accounts
+## 👥 Demo Accounts
 
 The system includes pre-configured demo accounts demonstrating the enhanced permission system:
 
@@ -152,7 +265,7 @@ The system includes pre-configured demo accounts demonstrating the enhanced perm
 ### 👤 Regular User Account ⭐ **Enhanced Features**
 - **Username:** `user@cmscrm.com`
 - **Password:** `User123!`
-- **Key Features:** 
+- **Key Features:**
   - ✅ **5 Assigned Pages** - Full CRUD access to users, roles, and pages
   - ✅ **No Access Denied Messages** - Seamless navigation experience
   - ✅ **Dashboard Access** - Real-time statistics and recent activity
@@ -214,7 +327,7 @@ The system includes pre-configured demo accounts demonstrating the enhanced perm
 ### Production Mode with PM2
 1. **Start with PM2**
    ```bash
-   cd backend && npm run pm2:start
+   pm2 start ecosystem.config.cjs
    # ✅ Production process management
    # ✅ Auto-restart and monitoring
    # ✅ Log management and clustering
@@ -222,9 +335,9 @@ The system includes pre-configured demo accounts demonstrating the enhanced perm
 
 2. **Monitor System Performance**
    ```bash
-   npm run pm2:monit    # Terminal monitoring
-   npm run pm2:logs     # View logs
-   npm run pm2:status   # Check status
+   pm2 monit    # Terminal monitoring
+   pm2 logs     # View logs
+   pm2 status   # Check status
    ```
 
 3. **Test the Enhanced System**
@@ -258,11 +371,16 @@ The system includes pre-configured demo accounts demonstrating the enhanced perm
 - `DELETE /api/roles/:id` - Delete role (admin)
 - `POST /api/roles/assign-pages` - Assign pages to role (admin)
 
+### System Monitoring Endpoints
+- `GET /api/system/info` - System information
+- `GET /api/system/performance` - Real-time performance metrics
+- `GET /api/system/processes` - PM2 process status
+- `GET /api/system/health` - System health check
+
 ### Statistics Endpoints
 - `GET /api/stats/dashboard` - Dashboard statistics
 - `GET /api/stats/activity` - Activity statistics (admin)
 - `GET /api/stats/login` - Login statistics (admin)
-- `GET /api/stats/health` - System health (admin)
 
 ## 🗄️ Database Schema
 
@@ -425,7 +543,6 @@ For support and questions:
 
 ---
 
-**Version**: 1.0.0  
-**Last Updated**: October 2025  
-**Status**: Production Ready#   S e r v e r _ D a s h b o a r d  
- 
+**Version**: 1.0.0
+**Last Updated**: October 2025
+**Status**: Production Ready

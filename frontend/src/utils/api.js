@@ -119,6 +119,11 @@ audit: {
   config: "/audit/config",
   currentSlot: "/audit/current-slot"
 },
+  // Activity Logs
+  activity: {
+    list: "/activity",
+    get: (id) => `/activity/${id}`,
+  },
   // Inspection Slots
  inspectionSlots: {
   list: "/inspection_slots",
