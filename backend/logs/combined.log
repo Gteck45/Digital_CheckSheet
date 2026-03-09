@@ -560,3 +560,871 @@
 2026-03-09 13:49 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 8.428 ms - -[0m
 2026-03-09 13:49 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044393846 [32m200[0m 21.277 ms - 591[0m
 2026-03-09 13:49 +05:30: [0mGET /api/brands [36m304[0m 3.391 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 8.432 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 8.855 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044435992 [32m200[0m 19.726 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044435993 [32m200[0m 19.552 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 5.150 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 5.149 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 7.333 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 11.273 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044438589 [32m200[0m 28.563 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 9.667 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 12.668 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044438591 [32m200[0m 25.771 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044449898 [32m200[0m 10.618 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 8.112 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 5.422 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 4.892 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044449900 [32m200[0m 18.104 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 8.163 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 5.859 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 5.694 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044451974 [32m200[0m 17.992 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 9.267 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 6.527 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044451977 [32m200[0m 26.490 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 3.756 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 4.370 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044455224 [32m200[0m 13.244 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 5.359 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044455227 [32m200[0m 16.810 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 5.038 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 8.241 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 8.787 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 9.285 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044457718 [32m200[0m 32.337 ms - 591[0m
+2026-03-09 13:50 +05:30: [0mGET /api/brands [36m304[0m 7.170 ms - -[0m
+2026-03-09 13:50 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044457720 [32m200[0m 28.555 ms - 591[0m
+2026-03-09 13:54 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 4.241 ms - -[0m
+2026-03-09 13:54 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044652627 [32m200[0m 15.990 ms - 591[0m
+2026-03-09 13:54 +05:30: [0mGET /api/brands [36m304[0m 5.886 ms - -[0m
+2026-03-09 13:54 +05:30: [0mGET /api/models?search=&page=1&limit=10 [36m304[0m 7.728 ms - -[0m
+2026-03-09 13:54 +05:30: [0mGET /api/brands [36m304[0m 7.532 ms - -[0m
+2026-03-09 13:54 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044652629 [32m200[0m 22.940 ms - 591[0m
+2026-03-09 13:54 +05:30: [0mGET /api/lines?search=&page=1&limit=10 [36m304[0m 5.454 ms - -[0m
+2026-03-09 13:54 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044666051 [32m200[0m 32.583 ms - 591[0m
+2026-03-09 13:54 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044666052 [32m200[0m 27.816 ms - 591[0m
+2026-03-09 13:54 +05:30: [0mGET /api/lines?search=&page=1&limit=10 [36m304[0m 8.126 ms - -[0m
+2026-03-09 13:54 +05:30: ❌ SQL Error: Duplicate entry 'Line B' for key 'lines.name'
+2026-03-09 13:54 +05:30: [0mPOST /api/lines [31m500[0m 6.364 ms - 75[0m
+2026-03-09 13:54 +05:30: ❌ SQL Error: Duplicate entry 'Line B' for key 'lines.name'
+2026-03-09 13:54 +05:30: [0mPOST /api/lines [31m500[0m 6.106 ms - 75[0m
+2026-03-09 13:54 +05:30: ❌ SQL Error: Duplicate entry 'Line B' for key 'lines.name'
+2026-03-09 13:54 +05:30: [0mPOST /api/lines [31m500[0m 6.081 ms - 75[0m
+2026-03-09 13:54 +05:30: ❌ SQL Error: Duplicate entry 'Line B' for key 'lines.name'
+2026-03-09 13:54 +05:30: [0mPOST /api/lines [31m500[0m 5.251 ms - 75[0m
+2026-03-09 13:55 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044727711 [32m200[0m 20.762 ms - 591[0m
+2026-03-09 13:55 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773044727712 [32m200[0m 13.622 ms - 591[0m
+2026-03-09 13:55 +05:30: [0mGET /api/inspection_slots/stats/summary [32m200[0m 32.185 ms - 78[0m
+2026-03-09 13:55 +05:30: [0mGET /api/inspection_slots?search=&page=1&limit=10 [32m200[0m 40.331 ms - 697[0m
+2026-03-09 13:55 +05:30: [0mGET /api/inspection_slots/stats/summary [36m304[0m 3.163 ms - -[0m
+2026-03-09 13:55 +05:30: [0mGET /api/inspection_slots?search=&page=1&limit=10 [36m304[0m 4.346 ms - -[0m
+2026-03-09 14:06 +05:30: [0mGET /api/inspection_slots/stats/summary [32m200[0m 16.656 ms - 79[0m
+2026-03-09 14:06 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045419061 [32m200[0m 32.136 ms - 591[0m
+2026-03-09 14:06 +05:30: [0mGET /api/inspection_slots/stats/summary [36m304[0m 7.474 ms - -[0m
+2026-03-09 14:06 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045419058 [32m200[0m 57.921 ms - 591[0m
+2026-03-09 14:06 +05:30: [0mGET /api/inspection_slots?search=&page=1&limit=10 [32m200[0m 32.798 ms - -[0m
+2026-03-09 14:06 +05:30: [0mGET /api/inspection_slots?search=&page=1&limit=10 [36m304[0m 3.818 ms - -[0m
+2026-03-09 14:07 +05:30: [0mGET /api/inspection_slots/stats/summary [36m304[0m 2.302 ms - -[0m
+2026-03-09 14:07 +05:30: [0mGET /api/inspection_slots?search=&page=2&limit=10 [32m200[0m 7.466 ms - 708[0m
+2026-03-09 14:07 +05:30: [0mGET /api/inspection_slots/stats/summary [36m304[0m 3.865 ms - -[0m
+2026-03-09 14:07 +05:30: [0mGET /api/inspection_slots?search=&page=1&limit=10 [36m304[0m 5.553 ms - -[0m
+2026-03-09 14:08 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045533131 [32m200[0m 10.403 ms - 591[0m
+2026-03-09 14:08 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045533133 [32m200[0m 11.166 ms - 591[0m
+2026-03-09 14:08 +05:30: [0mGET /api/lines [32m200[0m 4.337 ms - 405[0m
+2026-03-09 14:08 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045535183 [32m200[0m 23.819 ms - 591[0m
+2026-03-09 14:08 +05:30: [0mGET /api/lines [36m304[0m 7.658 ms - -[0m
+2026-03-09 14:08 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045535184 [32m200[0m 26.153 ms - 591[0m
+2026-03-09 14:08 +05:30: [0mGET /api/templates?entity_type=line&entity_id=3 [32m200[0m 20.501 ms - 947[0m
+2026-03-09 14:08 +05:30: [0mGET /api/inspection_slots [32m200[0m 1.729 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/memory [32m200[0m 38.554 ms - 297[0m
+2026-03-09 14:10 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045621408 [32m200[0m 70.166 ms - 591[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/info [32m200[0m 45.817 ms - 501[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/processes [36m304[0m 25.227 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/cpu [32m200[0m 43.131 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/performance [32m200[0m 51.723 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/health [32m200[0m 23.179 ms - 114[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/network [36m304[0m 34.337 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/process-stats [32m200[0m 43.786 ms - 816[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/memory [32m200[0m 38.950 ms - 297[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/info [32m200[0m 37.518 ms - 501[0m
+2026-03-09 14:10 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:10 +05:30: Access granted: User is super admin
+2026-03-09 14:10 +05:30: [0mGET /api/system/processes [36m304[0m 23.319 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/health [32m200[0m 55.845 ms - 114[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/network [36m304[0m 51.750 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/cpu [32m200[0m 30.842 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045621412 [32m200[0m 88.291 ms - 591[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/performance [32m200[0m 59.042 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/process-stats [32m200[0m 10.413 ms - 816[0m
+2026-03-09 14:10 +05:30: [0mGET /api/stats/dashboard [32m200[0m 129.464 ms - -[0m
+2026-03-09 14:10 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:10 +05:30: Access granted: User is super admin
+2026-03-09 14:10 +05:30: [0mGET /api/stats/dashboard [32m200[0m 27.582 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/memory [32m200[0m 27.614 ms - 297[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/cpu [32m200[0m 29.521 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/performance [32m200[0m 30.746 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/memory [32m200[0m 28.989 ms - 297[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/info [32m200[0m 29.377 ms - 500[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/processes [36m304[0m 26.297 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/cpu [32m200[0m 31.192 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/performance [32m200[0m 33.458 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/health [32m200[0m 12.653 ms - 269[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/network [36m304[0m 18.786 ms - -[0m
+2026-03-09 14:10 +05:30: [0mGET /api/system/process-stats [32m200[0m 16.992 ms - 815[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/memory [32m200[0m 23.627 ms - 297[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/cpu [32m200[0m 25.825 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/performance [32m200[0m 28.972 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/memory [32m200[0m 26.724 ms - 297[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/info [32m200[0m 27.621 ms - 512[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/processes [36m304[0m 28.936 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/health [32m200[0m 9.173 ms - 114[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/cpu [32m200[0m 28.188 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/performance [32m200[0m 29.541 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/network [36m304[0m 20.150 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/process-stats [32m200[0m 17.831 ms - 816[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/memory [32m200[0m 22.983 ms - 297[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/cpu [32m200[0m 26.027 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/performance [32m200[0m 29.785 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/memory [32m200[0m 31.116 ms - 297[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/info [32m200[0m 31.404 ms - 511[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/processes [36m304[0m 29.947 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/cpu [32m200[0m 32.159 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/performance [32m200[0m 34.033 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/health [32m200[0m 11.005 ms - 114[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/network [36m304[0m 19.826 ms - -[0m
+2026-03-09 14:11 +05:30: [0mGET /api/system/process-stats [32m200[0m 17.997 ms - 816[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/memory [32m200[0m 22.702 ms - 297[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/cpu [32m200[0m 25.558 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/performance [32m200[0m 28.670 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/memory [32m200[0m 30.152 ms - 297[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/info [32m200[0m 28.857 ms - 500[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/processes [36m304[0m 27.020 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/cpu [32m200[0m 32.906 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/performance [32m200[0m 35.895 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/health [32m200[0m 10.487 ms - 222[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/network [36m304[0m 13.593 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/process-stats [32m200[0m 11.634 ms - 816[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/memory [32m200[0m 21.529 ms - 297[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/cpu [32m200[0m 23.816 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/performance [32m200[0m 27.139 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/memory [32m200[0m 27.327 ms - 297[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/info [32m200[0m 27.429 ms - 511[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/processes [36m304[0m 26.199 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/cpu [32m200[0m 29.368 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/performance [32m200[0m 30.809 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/health [32m200[0m 10.166 ms - 222[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/network [36m304[0m 14.271 ms - -[0m
+2026-03-09 14:12 +05:30: [0mGET /api/system/process-stats [32m200[0m 11.643 ms - 816[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/memory [32m200[0m 23.455 ms - 297[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/cpu [32m200[0m 27.968 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/performance [32m200[0m 35.262 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/memory [32m200[0m 26.616 ms - 297[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/info [32m200[0m 25.656 ms - 510[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/cpu [32m200[0m 28.897 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/performance [32m200[0m 30.248 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/processes [36m304[0m 9.611 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/health [32m200[0m 7.360 ms - 222[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/network [36m304[0m 13.788 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/process-stats [32m200[0m 12.743 ms - 816[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/memory [32m200[0m 24.939 ms - 297[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/performance [32m200[0m 29.492 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/cpu [32m200[0m 27.723 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/memory [32m200[0m 31.420 ms - 297[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/cpu [32m200[0m 35.044 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/performance [32m200[0m 39.997 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/info [32m200[0m 15.638 ms - 512[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/processes [36m304[0m 15.369 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/health [32m200[0m 13.077 ms - 114[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/network [36m304[0m 19.215 ms - -[0m
+2026-03-09 14:13 +05:30: [0mGET /api/system/process-stats [32m200[0m 17.370 ms - 816[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/memory [32m200[0m 27.306 ms - 297[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/cpu [32m200[0m 32.531 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/performance [32m200[0m 37.236 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/memory [32m200[0m 29.857 ms - 297[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/cpu [32m200[0m 32.970 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/performance [32m200[0m 36.278 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/info [32m200[0m 11.676 ms - 513[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/processes [36m304[0m 10.109 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/health [32m200[0m 10.811 ms - 269[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/network [36m304[0m 17.877 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/process-stats [32m200[0m 17.127 ms - 816[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/memory [32m200[0m 49.287 ms - 296[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/cpu [32m200[0m 51.548 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/performance [32m200[0m 53.559 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/memory [32m200[0m 23.965 ms - 297[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/info [32m200[0m 23.958 ms - 509[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/processes [36m304[0m 6.691 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/cpu [32m200[0m 25.617 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/performance [32m200[0m 27.298 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/health [32m200[0m 8.864 ms - 114[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/network [36m304[0m 15.275 ms - -[0m
+2026-03-09 14:14 +05:30: [0mGET /api/system/process-stats [32m200[0m 12.027 ms - 816[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/memory [32m200[0m 21.275 ms - 297[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/cpu [32m200[0m 22.705 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/performance [32m200[0m 24.048 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/memory [32m200[0m 5.836 ms - 297[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/info [32m200[0m 5.866 ms - 513[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/processes [36m304[0m 6.338 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/performance [32m200[0m 19.836 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/cpu [32m200[0m 8.160 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/health [32m200[0m 8.237 ms - 114[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/network [36m304[0m 15.919 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/process-stats [32m200[0m 12.592 ms - 816[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/memory [32m200[0m 19.283 ms - 297[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/cpu [32m200[0m 20.900 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/performance [32m200[0m 21.710 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/memory [32m200[0m 5.252 ms - 297[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/cpu [32m200[0m 24.081 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/performance [32m200[0m 27.256 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/info [32m200[0m 12.001 ms - 500[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/processes [36m304[0m 12.458 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/health [32m200[0m 10.545 ms - 114[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/network [36m304[0m 15.293 ms - -[0m
+2026-03-09 14:15 +05:30: [0mGET /api/system/process-stats [32m200[0m 11.972 ms - 816[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/memory [32m200[0m 44.202 ms - 297[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/cpu [32m200[0m 47.649 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/performance [32m200[0m 50.307 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/memory [32m200[0m 8.421 ms - 297[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/info [32m200[0m 8.717 ms - 501[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/performance [32m200[0m 33.575 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/processes [36m304[0m 11.067 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/cpu [32m200[0m 11.989 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/health [32m200[0m 12.022 ms - 269[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/network [36m304[0m 21.232 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/process-stats [32m200[0m 16.886 ms - 816[0m
+2026-03-09 14:16 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:16 +05:30: Access granted: User is super admin
+2026-03-09 14:16 +05:30: [0mGET /api/stats/dashboard [32m200[0m 27.743 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/memory [32m200[0m 63.373 ms - 300[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/cpu [32m200[0m 66.481 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/performance [32m200[0m 67.193 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773045997516 [32m200[0m 15.585 ms - 591[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/memory [32m200[0m 76.076 ms - 296[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/cpu [32m200[0m 76.699 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/performance [32m200[0m 70.766 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/info [32m200[0m 42.533 ms - 513[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/processes [36m304[0m 4.730 ms - -[0m
+2026-03-09 14:16 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:16 +05:30: Access granted: User is super admin
+2026-03-09 14:16 +05:30: [0mGET /api/system/health [32m200[0m 13.224 ms - 269[0m
+2026-03-09 14:16 +05:30: [0mGET /api/stats/dashboard [32m200[0m 35.064 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/network [36m304[0m 31.340 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/process-stats [32m200[0m 6.995 ms - 816[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/memory [32m200[0m 88.720 ms - 296[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/info [32m200[0m 86.519 ms - 513[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/processes [36m304[0m 87.870 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046000483 [32m200[0m 125.134 ms - 591[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/cpu [32m200[0m 91.889 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/performance [32m200[0m 91.471 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/health [32m200[0m 23.337 ms - 269[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/network [36m304[0m 40.235 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/process-stats [32m200[0m 39.173 ms - 816[0m
+2026-03-09 14:16 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:16 +05:30: Access granted: User is super admin
+2026-03-09 14:16 +05:30: [0mGET /api/stats/dashboard [32m200[0m 37.596 ms - -[0m
+2026-03-09 14:16 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:16 +05:30: Access granted: User is super admin
+2026-03-09 14:16 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:16 +05:30: Access granted: User is super admin
+2026-03-09 14:16 +05:30: [0mGET /api/pages [32m200[0m 64.672 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/stats/dashboard [32m200[0m 73.719 ms - -[0m
+2026-03-09 14:16 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:16 +05:30: Access granted: User is super admin
+2026-03-09 14:16 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:16 +05:30: Access granted: User is super admin
+2026-03-09 14:16 +05:30: [0mGET /api/pages [36m304[0m 19.923 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/stats/dashboard [32m200[0m 38.203 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/memory [32m200[0m 4.080 ms - 300[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/cpu [32m200[0m 54.266 ms - -[0m
+2026-03-09 14:16 +05:30: [0mGET /api/system/performance [32m200[0m 57.815 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/memory [32m200[0m 92.138 ms - 300[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/info [32m200[0m 95.315 ms - 501[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/processes [36m304[0m 99.837 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/cpu [32m200[0m 95.335 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/performance [32m200[0m 94.031 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/memory [32m200[0m 26.176 ms - 299[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/health [32m200[0m 35.939 ms - 269[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/info [32m200[0m 66.470 ms - 501[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/network [36m304[0m 108.439 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/processes [36m304[0m 104.206 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/process-stats [32m200[0m 104.072 ms - 816[0m
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: [0mGET /api/system/cpu [32m200[0m 16.563 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/performance [32m200[0m 99.522 ms - -[0m
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: [0mGET /api/system/health [32m200[0m 49.211 ms - 269[0m
+2026-03-09 14:17 +05:30: [0mGET /api/pages [36m304[0m 103.793 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/stats/dashboard [32m200[0m 153.606 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.404 ms - 815[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/network [36m304[0m 45.484 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/memory [32m200[0m 195.873 ms - 300[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/info [32m200[0m 212.770 ms - 501[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/processes [36m304[0m 207.717 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046029138 [32m200[0m 253.318 ms - 591[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/cpu [32m200[0m 197.287 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/performance [32m200[0m 136.031 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/health [32m200[0m 14.903 ms - 269[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/network [36m304[0m 65.913 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/process-stats [32m200[0m 55.914 ms - 816[0m
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: [0mGET /api/pages [36m304[0m 70.198 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/stats/dashboard [32m200[0m 95.098 ms - -[0m
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: [0mGET /api/pages [36m304[0m 29.417 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/stats/dashboard [32m200[0m 69.067 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/memory [32m200[0m 121.324 ms - 300[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/info [32m200[0m 32.031 ms - 511[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/cpu [32m200[0m 125.598 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/performance [32m200[0m 121.035 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/processes [36m304[0m 31.834 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/network [36m304[0m 40.273 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/health [32m200[0m 38.157 ms - 269[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/process-stats [32m200[0m 19.243 ms - 815[0m
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: [0mGET /api/system/memory [32m200[0m 33.685 ms - 300[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/info [32m200[0m 40.232 ms - 511[0m
+2026-03-09 14:17 +05:30: [0mGET /api/pages [36m304[0m 92.819 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/stats/dashboard [32m200[0m 150.294 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/cpu [32m200[0m 20.788 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/processes [36m304[0m 6.187 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/network [36m304[0m 125.799 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/health [32m200[0m 120.729 ms - 269[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/process-stats [32m200[0m 119.058 ms - 816[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/performance [32m200[0m 95.498 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/memory [32m200[0m 33.995 ms - 300[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/cpu [32m200[0m 35.544 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/performance [32m200[0m 35.533 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/lines?search=&page=1&limit=10 [36m304[0m 4.205 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046061224 [32m200[0m 14.106 ms - 591[0m
+2026-03-09 14:17 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046061221 [32m200[0m 28.844 ms - 591[0m
+2026-03-09 14:17 +05:30: [0mGET /api/lines?search=&page=1&limit=10 [36m304[0m 6.921 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046064623 [32m200[0m 62.610 ms - 591[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/performance [32m200[0m 49.808 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/memory [32m200[0m 13.412 ms - 297[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/cpu [32m200[0m 13.281 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/info [32m200[0m 14.169 ms - 513[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/processes [36m304[0m 13.418 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/process-stats [32m200[0m 19.848 ms - 816[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/health [32m200[0m 15.085 ms - 269[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/network [36m304[0m 26.475 ms - -[0m
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: [0mGET /api/system/memory [32m200[0m 31.506 ms - 297[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/info [32m200[0m 27.100 ms - 513[0m
+2026-03-09 14:17 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046064627 [32m200[0m 107.519 ms - 591[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/performance [32m200[0m 61.534 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/cpu [32m200[0m 31.795 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/processes [36m304[0m 26.717 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/process-stats [32m200[0m 22.803 ms - 816[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/health [32m200[0m 17.531 ms - 269[0m
+2026-03-09 14:17 +05:30: [0mGET /api/system/network [36m304[0m 30.650 ms - -[0m
+2026-03-09 14:17 +05:30: [0mGET /api/stats/dashboard [32m200[0m 144.860 ms - -[0m
+2026-03-09 14:17 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:17 +05:30: Access granted: User is super admin
+2026-03-09 14:17 +05:30: [0mGET /api/stats/dashboard [32m200[0m 27.146 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/memory [32m200[0m 44.543 ms - 296[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/info [32m200[0m 46.869 ms - 513[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/processes [36m304[0m 7.120 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/cpu [32m200[0m 45.216 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/performance [32m200[0m 48.333 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046087613 [32m200[0m 78.540 ms - 591[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/health [32m200[0m 24.416 ms - 269[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/memory [32m200[0m 18.869 ms - 296[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/info [32m200[0m 17.860 ms - 512[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/network [36m304[0m 30.025 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/processes [36m304[0m 28.884 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/process-stats [32m200[0m 43.795 ms - 816[0m
+2026-03-09 14:18 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:18 +05:30: Access granted: User is super admin
+2026-03-09 14:18 +05:30: [0mGET /api/system/cpu [32m200[0m 24.963 ms - -[0m
+2026-03-09 14:18 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:18 +05:30: Access granted: User is super admin
+2026-03-09 14:18 +05:30: [0mGET /api/system/performance [32m200[0m 45.560 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/health [32m200[0m 13.352 ms - 269[0m
+2026-03-09 14:18 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046087617 [32m200[0m 65.223 ms - 591[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/network [36m304[0m 28.845 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/pages [36m304[0m 86.142 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/process-stats [32m200[0m 22.124 ms - 816[0m
+2026-03-09 14:18 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:18 +05:30: Access granted: User is super admin
+2026-03-09 14:18 +05:30: [0mGET /api/stats/dashboard [32m200[0m 109.319 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/pages [36m304[0m 17.523 ms - -[0m
+2026-03-09 14:18 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:18 +05:30: Access granted: User is super admin
+2026-03-09 14:18 +05:30: [0mGET /api/stats/dashboard [32m200[0m 17.873 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/memory [32m200[0m 25.477 ms - 296[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/cpu [32m200[0m 27.594 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/performance [32m200[0m 29.705 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/memory [32m200[0m 23.875 ms - 296[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/info [32m200[0m 23.840 ms - 512[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/cpu [32m200[0m 25.641 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/performance [32m200[0m 28.422 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/processes [36m304[0m 10.595 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/health [32m200[0m 9.772 ms - 269[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/network [36m304[0m 14.366 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/process-stats [32m200[0m 12.718 ms - 816[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/memory [32m200[0m 25.909 ms - 296[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/cpu [32m200[0m 28.124 ms - -[0m
+2026-03-09 14:18 +05:30: [0mGET /api/system/performance [32m200[0m 29.875 ms - -[0m
+2026-03-09 14:19 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:19 +05:30: Access granted: User is super admin
+2026-03-09 14:19 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046147982 [32m200[0m 11.471 ms - 591[0m
+2026-03-09 14:19 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046147984 [32m200[0m 12.702 ms - 591[0m
+2026-03-09 14:19 +05:30: [0mGET /api/pages [36m304[0m 16.278 ms - -[0m
+2026-03-09 14:19 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:19 +05:30: Access granted: User is super admin
+2026-03-09 14:19 +05:30: [0mGET /api/pages [36m304[0m 7.426 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046152554 [32m200[0m 12.778 ms - 591[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/memory [32m200[0m 10.765 ms - 297[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/info [32m200[0m 10.332 ms - 501[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/cpu [32m200[0m 45.922 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/performance [32m200[0m 39.670 ms - -[0m
+2026-03-09 14:19 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:19 +05:30: Access granted: User is super admin
+2026-03-09 14:19 +05:30: [0mGET /api/system/processes [36m304[0m 8.013 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/health [32m200[0m 15.899 ms - 376[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/network [36m304[0m 27.526 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/process-stats [32m200[0m 25.815 ms - 816[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/memory [32m200[0m 23.358 ms - 297[0m
+2026-03-09 14:19 +05:30: [0mGET /api/pages [36m304[0m 49.050 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/info [32m200[0m 29.652 ms - 500[0m
+2026-03-09 14:19 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:19 +05:30: Access granted: User is super admin
+2026-03-09 14:19 +05:30: [0mGET /api/system/processes [36m304[0m 38.472 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/health [32m200[0m 43.052 ms - 269[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/cpu [32m200[0m 20.972 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/performance [32m200[0m 44.828 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046152558 [32m200[0m 68.648 ms - 591[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/network [36m304[0m 31.766 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/process-stats [32m200[0m 26.032 ms - 815[0m
+2026-03-09 14:19 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:19 +05:30: Access granted: User is super admin
+2026-03-09 14:19 +05:30: [0mGET /api/stats/dashboard [32m200[0m 103.067 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/pages [36m304[0m 20.765 ms - -[0m
+2026-03-09 14:19 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:19 +05:30: Access granted: User is super admin
+2026-03-09 14:19 +05:30: [0mGET /api/stats/dashboard [32m200[0m 20.635 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/memory [32m200[0m 30.355 ms - 297[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/cpu [32m200[0m 31.333 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/performance [32m200[0m 34.419 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/memory [32m200[0m 21.892 ms - 296[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/cpu [32m200[0m 23.974 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/performance [32m200[0m 26.302 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/info [32m200[0m 10.726 ms - 501[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/processes [36m304[0m 9.791 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/health [32m200[0m 9.858 ms - 269[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/network [36m304[0m 17.553 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/process-stats [32m200[0m 16.653 ms - 816[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/memory [32m200[0m 17.421 ms - 296[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/cpu [32m200[0m 18.657 ms - -[0m
+2026-03-09 14:19 +05:30: [0mGET /api/system/performance [32m200[0m 19.613 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/memory [32m200[0m 23.148 ms - 297[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/info [32m200[0m 21.859 ms - 513[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/processes [36m304[0m 21.516 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/cpu [32m200[0m 24.312 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/performance [32m200[0m 26.291 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/health [32m200[0m 9.576 ms - 269[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/network [36m304[0m 13.773 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/process-stats [32m200[0m 11.810 ms - 816[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/memory [32m200[0m 18.088 ms - 296[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/cpu [32m200[0m 19.241 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/performance [32m200[0m 20.252 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/memory [32m200[0m 22.456 ms - 297[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/info [32m200[0m 22.506 ms - 513[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/processes [36m304[0m 22.495 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/cpu [32m200[0m 24.396 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/performance [32m200[0m 26.217 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/health [32m200[0m 5.324 ms - 114[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/network [36m304[0m 15.889 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/process-stats [32m200[0m 13.340 ms - 816[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/memory [32m200[0m 22.412 ms - 297[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/cpu [32m200[0m 25.479 ms - -[0m
+2026-03-09 14:20 +05:30: [0mGET /api/system/performance [32m200[0m 28.565 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046299874 [32m200[0m 22.220 ms - 591[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/cpu [32m200[0m 14.769 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046299880 [32m200[0m 19.265 ms - 591[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/memory [32m200[0m 81.154 ms - 297[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/processes [36m304[0m 79.023 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/info [32m200[0m 12.143 ms - 500[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/performance [32m200[0m 83.673 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/health [32m200[0m 20.120 ms - 269[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/network [36m304[0m 46.711 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/process-stats [32m200[0m 44.367 ms - 816[0m
+2026-03-09 14:21 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:21 +05:30: Access granted: User is super admin
+2026-03-09 14:21 +05:30: [0mGET /api/system/processes [36m304[0m 22.776 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/memory [32m200[0m 20.233 ms - 297[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/info [32m200[0m 68.103 ms - 500[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/cpu [32m200[0m 32.941 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/performance [32m200[0m 65.478 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/network [36m304[0m 49.521 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/health [32m200[0m 54.766 ms - 269[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/process-stats [32m200[0m 47.652 ms - 816[0m
+2026-03-09 14:21 +05:30: [0mGET /api/stats/dashboard [32m200[0m 127.038 ms - -[0m
+2026-03-09 14:21 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:21 +05:30: Access granted: User is super admin
+2026-03-09 14:21 +05:30: [0mGET /api/stats/dashboard [32m200[0m 27.724 ms - -[0m
+2026-03-09 14:21 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:21 +05:30: Access granted: User is super admin
+2026-03-09 14:21 +05:30: [0mGET /api/stats/dashboard [32m200[0m 24.925 ms - -[0m
+2026-03-09 14:21 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:21 +05:30: Access granted: User is super admin
+2026-03-09 14:21 +05:30: [0mGET /api/stats/dashboard [32m200[0m 23.734 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/memory [32m200[0m 21.591 ms - 297[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/cpu [32m200[0m 22.702 ms - -[0m
+2026-03-09 14:21 +05:30: [0mGET /api/system/performance [32m200[0m 23.534 ms - -[0m
+2026-03-09 14:22 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:22 +05:30: Access granted: User is super admin
+2026-03-09 14:22 +05:30: [0mGET /api/stats/dashboard [32m200[0m 26.316 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/performance [32m200[0m 27.386 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/memory [32m200[0m 5.808 ms - 297[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/cpu [32m200[0m 9.411 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/processes [36m304[0m 14.062 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/info [32m200[0m 13.123 ms - 511[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/health [32m200[0m 11.416 ms - 269[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/network [36m304[0m 17.711 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/process-stats [32m200[0m 16.639 ms - 816[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/memory [32m200[0m 39.847 ms - 297[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/info [32m200[0m 38.629 ms - 513[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/processes [36m304[0m 36.852 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/cpu [32m200[0m 43.452 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/performance [32m200[0m 46.423 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046331627 [32m200[0m 62.390 ms - 591[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/health [32m200[0m 6.196 ms - 269[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/network [36m304[0m 24.457 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/process-stats [32m200[0m 21.987 ms - 816[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/memory [32m200[0m 25.269 ms - 297[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/info [32m200[0m 24.674 ms - 513[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/processes [36m304[0m 21.016 ms - -[0m
+2026-03-09 14:22 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:22 +05:30: Access granted: User is super admin
+2026-03-09 14:22 +05:30: [0mGET /api/system/health [32m200[0m 39.913 ms - 269[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/network [36m304[0m 46.982 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046331630 [32m200[0m 72.122 ms - 591[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/cpu [32m200[0m 15.558 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/performance [32m200[0m 40.342 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/process-stats [32m200[0m 8.759 ms - 816[0m
+2026-03-09 14:22 +05:30: [0mGET /api/stats/dashboard [32m200[0m 80.101 ms - -[0m
+2026-03-09 14:22 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:22 +05:30: Access granted: User is super admin
+2026-03-09 14:22 +05:30: [0mGET /api/stats/dashboard [32m200[0m 15.823 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/memory [32m200[0m 18.606 ms - 297[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/cpu [32m200[0m 19.768 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/performance [32m200[0m 21.292 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/memory [32m200[0m 7.820 ms - 297[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/info [32m200[0m 7.976 ms - 500[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/processes [36m304[0m 7.418 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/performance [32m200[0m 22.546 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/cpu [32m200[0m 8.769 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/health [32m200[0m 7.921 ms - 269[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/network [36m304[0m 13.750 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/process-stats [32m200[0m 12.410 ms - 816[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/memory [32m200[0m 24.731 ms - 297[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/cpu [32m200[0m 27.863 ms - -[0m
+2026-03-09 14:22 +05:30: [0mGET /api/system/performance [32m200[0m 30.776 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/memory [32m200[0m 36.676 ms - 297[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/info [32m200[0m 35.833 ms - 501[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/cpu [32m200[0m 40.413 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/performance [32m200[0m 47.574 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/processes [36m304[0m 12.417 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/network [36m304[0m 17.935 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/health [32m200[0m 16.604 ms - 114[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.230 ms - 816[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/memory [32m200[0m 21.636 ms - 297[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/cpu [32m200[0m 24.214 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/performance [32m200[0m 26.953 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/memory [32m200[0m 28.295 ms - 297[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/info [32m200[0m 27.056 ms - 513[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/processes [36m304[0m 25.199 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/cpu [32m200[0m 30.582 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/performance [32m200[0m 34.309 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/health [32m200[0m 10.058 ms - 269[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/network [36m304[0m 15.285 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/process-stats [32m200[0m 11.694 ms - 816[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/memory [32m200[0m 18.257 ms - 297[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/cpu [32m200[0m 19.140 ms - -[0m
+2026-03-09 14:23 +05:30: [0mGET /api/system/performance [32m200[0m 20.380 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/memory [32m200[0m 23.911 ms - 297[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/info [32m200[0m 23.053 ms - 513[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/processes [36m304[0m 21.909 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/cpu [32m200[0m 26.271 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/performance [32m200[0m 29.788 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/health [32m200[0m 8.741 ms - 114[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/network [36m304[0m 16.099 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.142 ms - 816[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/memory [32m200[0m 31.200 ms - 297[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/cpu [32m200[0m 34.152 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/performance [32m200[0m 36.405 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/memory [32m200[0m 30.164 ms - 297[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/info [32m200[0m 33.591 ms - 513[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/processes [36m304[0m 7.268 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/cpu [32m200[0m 34.465 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/performance [32m200[0m 38.242 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/health [32m200[0m 7.330 ms - 114[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/network [36m304[0m 15.438 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/process-stats [32m200[0m 13.988 ms - 816[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/memory [32m200[0m 24.236 ms - 297[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/cpu [32m200[0m 28.213 ms - -[0m
+2026-03-09 14:24 +05:30: [0mGET /api/system/performance [32m200[0m 30.285 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/memory [32m200[0m 32.212 ms - 297[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/info [32m200[0m 32.820 ms - 513[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/processes [36m304[0m 10.479 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/cpu [32m200[0m 34.732 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/performance [32m200[0m 37.677 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/health [32m200[0m 11.477 ms - 269[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/network [36m304[0m 16.258 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/process-stats [32m200[0m 14.114 ms - 816[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/memory [32m200[0m 23.487 ms - 297[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/cpu [32m200[0m 23.812 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/performance [32m200[0m 22.793 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/memory [32m200[0m 25.196 ms - 297[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/info [32m200[0m 24.973 ms - 500[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/processes [36m304[0m 11.130 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/health [32m200[0m 7.446 ms - 269[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/cpu [32m200[0m 29.066 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/performance [32m200[0m 31.868 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/network [36m304[0m 18.610 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/process-stats [32m200[0m 17.989 ms - 815[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/memory [32m200[0m 24.223 ms - 297[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/cpu [32m200[0m 25.384 ms - -[0m
+2026-03-09 14:25 +05:30: [0mGET /api/system/performance [32m200[0m 26.181 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/memory [32m200[0m 41.036 ms - 297[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/info [32m200[0m 39.848 ms - 513[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/cpu [32m200[0m 44.762 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/performance [32m200[0m 48.590 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/processes [36m304[0m 12.427 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/health [32m200[0m 11.061 ms - 114[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/network [36m304[0m 16.566 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.642 ms - 815[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/memory [32m200[0m 23.639 ms - 297[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/cpu [32m200[0m 25.007 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/performance [32m200[0m 26.558 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046596194 [32m200[0m 24.947 ms - 591[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/memory [32m200[0m 76.821 ms - 297[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/info [32m200[0m 81.942 ms - 513[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/processes [36m304[0m 23.683 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/cpu [32m200[0m 81.774 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/performance [32m200[0m 82.113 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/health [32m200[0m 21.172 ms - 269[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/network [36m304[0m 35.166 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/process-stats [32m200[0m 29.891 ms - 816[0m
+2026-03-09 14:26 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:26 +05:30: Access granted: User is super admin
+2026-03-09 14:26 +05:30: [0mGET /api/stats/dashboard [32m200[0m 19.168 ms - -[0m
+2026-03-09 14:26 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:26 +05:30: Access granted: User is super admin
+2026-03-09 14:26 +05:30: [0mGET /api/stats/dashboard [32m200[0m 26.519 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046609516 [32m200[0m 16.304 ms - 591[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/memory [32m200[0m 62.235 ms - 297[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/info [32m200[0m 66.151 ms - 500[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/performance [32m200[0m 65.678 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/processes [36m304[0m 49.095 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/health [32m200[0m 18.988 ms - 269[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/cpu [32m200[0m 62.520 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/network [36m304[0m 34.949 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/process-stats [32m200[0m 16.224 ms - 815[0m
+2026-03-09 14:26 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:26 +05:30: Access granted: User is super admin
+2026-03-09 14:26 +05:30: [0mGET /api/stats/dashboard [32m200[0m 41.822 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046613095 [32m200[0m 18.365 ms - 591[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/memory [32m200[0m 74.139 ms - 298[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/info [32m200[0m 71.452 ms - 512[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/processes [36m304[0m 110.024 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/health [32m200[0m 57.981 ms - 269[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/cpu [32m200[0m 80.328 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/performance [32m200[0m 75.870 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 3.954 ms - 93[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/network [36m304[0m 76.306 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/process-stats [32m200[0m 71.487 ms - 816[0m
+2026-03-09 14:26 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:26 +05:30: Access granted: User is super admin
+2026-03-09 14:26 +05:30: [0mGET /api/stats/dashboard [32m200[0m 50.549 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/memory [32m200[0m 71.085 ms - 296[0m
+2026-03-09 14:26 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046617792 [32m200[0m 104.120 ms - 591[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/info [32m200[0m 72.618 ms - 525[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/processes [36m304[0m 76.192 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/cpu [32m200[0m 31.166 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/performance [32m200[0m 79.195 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 1.240 ms - 93[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/health [32m200[0m 32.656 ms - 269[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/network [36m304[0m 51.400 ms - -[0m
+2026-03-09 14:26 +05:30: [0mGET /api/system/process-stats [32m200[0m 54.834 ms - 816[0m
+2026-03-09 14:26 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:26 +05:30: Access granted: User is super admin
+2026-03-09 14:26 +05:30: [0mGET /api/stats/dashboard [32m200[0m 35.202 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/memory [32m200[0m 26.687 ms - 297[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/cpu [32m200[0m 28.652 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/performance [32m200[0m 31.513 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/memory [32m200[0m 46.878 ms - 297[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/info [32m200[0m 45.685 ms - 526[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/cpu [32m200[0m 48.522 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/performance [32m200[0m 49.987 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/processes [36m304[0m 10.897 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/health [32m200[0m 12.450 ms - 269[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/network [36m304[0m 27.629 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/process-stats [32m200[0m 25.890 ms - 816[0m
+2026-03-09 14:27 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 0.501 ms - 93[0m
+2026-03-09 14:27 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:27 +05:30: Access granted: User is super admin
+2026-03-09 14:27 +05:30: [0mGET /api/stats/dashboard [32m200[0m 17.416 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/memory [32m200[0m 33.340 ms - 297[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/info [32m200[0m 34.155 ms - 512[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/processes [36m304[0m 34.250 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/cpu [32m200[0m 35.178 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/performance [32m200[0m 37.064 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046649791 [32m200[0m 57.935 ms - 591[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/health [32m200[0m 19.742 ms - 269[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/network [36m304[0m 30.489 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 0.643 ms - 93[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/process-stats [32m200[0m 38.082 ms - 816[0m
+2026-03-09 14:27 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:27 +05:30: Access granted: User is super admin
+2026-03-09 14:27 +05:30: [0mGET /api/stats/dashboard [32m200[0m 24.567 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/memory [32m200[0m 30.210 ms - 297[0m
+2026-03-09 14:27 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046657848 [32m200[0m 47.466 ms - 591[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/cpu [32m200[0m 30.687 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/performance [32m200[0m 33.283 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/info [32m200[0m 20.783 ms - 513[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/processes [36m304[0m 19.723 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/memory [32m200[0m 18.003 ms - 297[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/health [32m200[0m 16.942 ms - 269[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/network [36m304[0m 24.494 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 0.337 ms - 93[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/process-stats [32m200[0m 35.151 ms - 816[0m
+2026-03-09 14:27 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:27 +05:30: Access granted: User is super admin
+2026-03-09 14:27 +05:30: [0mGET /api/system/cpu [32m200[0m 22.249 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/performance [32m200[0m 37.698 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/info [32m200[0m 13.428 ms - 513[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/processes [36m304[0m 11.847 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046657850 [32m200[0m 53.178 ms - 591[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/health [32m200[0m 8.853 ms - 269[0m
+2026-03-09 14:27 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 0.308 ms - 93[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/network [36m304[0m 26.550 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/process-stats [32m200[0m 16.645 ms - 816[0m
+2026-03-09 14:27 +05:30: [0mGET /api/stats/dashboard [32m200[0m 88.959 ms - -[0m
+2026-03-09 14:27 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:27 +05:30: Access granted: User is super admin
+2026-03-09 14:27 +05:30: [0mGET /api/stats/dashboard [32m200[0m 11.254 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/memory [32m200[0m 19.155 ms - 297[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/cpu [32m200[0m 20.157 ms - -[0m
+2026-03-09 14:27 +05:30: [0mGET /api/system/performance [32m200[0m 20.887 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046682288 [32m200[0m 16.963 ms - 591[0m
+2026-03-09 14:28 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:28 +05:30: Access granted: User is super admin
+2026-03-09 14:28 +05:30: [0mGET /api/roles/simple [32m200[0m 45.330 ms - 410[0m
+2026-03-09 14:28 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046682289 [32m200[0m 52.704 ms - 591[0m
+2026-03-09 14:28 +05:30: [0mGET /api/users?page=1&limit=10&search= [32m200[0m 58.546 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/roles/simple [36m304[0m 21.107 ms - -[0m
+2026-03-09 14:28 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:28 +05:30: Access granted: User is super admin
+2026-03-09 14:28 +05:30: [0mGET /api/users?page=1&limit=10&search= [36m304[0m 10.394 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046685271 [32m200[0m 17.066 ms - 591[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/memory [32m200[0m 47.187 ms - 297[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/info [32m200[0m 45.893 ms - 501[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/processes [36m304[0m 12.669 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/cpu [32m200[0m 50.737 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/performance [32m200[0m 54.532 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/health [32m200[0m 23.733 ms - 269[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/memory [32m200[0m 21.537 ms - 297[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/info [32m200[0m 20.945 ms - 501[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/network [36m304[0m 30.381 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/processes [36m304[0m 26.898 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/process-stats [32m200[0m 24.341 ms - 816[0m
+2026-03-09 14:28 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 0.356 ms - 93[0m
+2026-03-09 14:28 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:28 +05:30: Access granted: User is super admin
+2026-03-09 14:28 +05:30: [0mGET /api/system/health [32m200[0m 34.667 ms - 269[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/cpu [32m200[0m 17.508 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/performance [32m200[0m 38.293 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/network [36m304[0m 25.059 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046685273 [32m200[0m 68.382 ms - 591[0m
+2026-03-09 14:28 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 0.451 ms - 93[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/process-stats [32m200[0m 10.019 ms - 816[0m
+2026-03-09 14:28 +05:30: [0mGET /api/stats/dashboard [32m200[0m 80.524 ms - -[0m
+2026-03-09 14:28 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:28 +05:30: Access granted: User is super admin
+2026-03-09 14:28 +05:30: [0mGET /api/stats/dashboard [32m200[0m 17.890 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/memory [32m200[0m 22.717 ms - 297[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/cpu [32m200[0m 23.583 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/performance [32m200[0m 24.260 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/memory [32m200[0m 24.002 ms - 297[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/info [32m200[0m 23.389 ms - 501[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/processes [36m304[0m 23.032 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/cpu [32m200[0m 27.106 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/performance [32m200[0m 28.726 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/health [32m200[0m 12.005 ms - 269[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/network [36m304[0m 18.049 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/process-stats [32m200[0m 13.153 ms - 816[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/memory [32m200[0m 18.897 ms - 297[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/cpu [32m200[0m 20.589 ms - -[0m
+2026-03-09 14:28 +05:30: [0mGET /api/system/performance [32m200[0m 21.582 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/memory [32m200[0m 7.763 ms - 297[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/info [32m200[0m 7.842 ms - 501[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/performance [32m200[0m 37.075 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/cpu [32m200[0m 9.507 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/processes [36m304[0m 13.686 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/health [32m200[0m 13.777 ms - 269[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/network [36m304[0m 23.378 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/process-stats [32m200[0m 20.360 ms - 816[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/memory [32m200[0m 20.767 ms - 297[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/cpu [32m200[0m 22.068 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/performance [32m200[0m 22.942 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/memory [32m200[0m 32.210 ms - 297[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/info [32m200[0m 29.496 ms - 512[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/processes [36m304[0m 32.807 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/cpu [32m200[0m 33.687 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/performance [32m200[0m 35.359 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/health [32m200[0m 8.978 ms - 376[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/network [36m304[0m 24.376 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/process-stats [32m200[0m 18.171 ms - 816[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/info [32m200[0m 45.206 ms - 512[0m
+2026-03-09 14:29 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046784455 [32m200[0m 73.855 ms - 591[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/memory [32m200[0m 9.886 ms - 296[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/processes [36m304[0m 11.633 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/cpu [32m200[0m 48.228 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/performance [32m200[0m 51.076 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/health [32m200[0m 13.643 ms - 269[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/network [36m304[0m 22.036 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/process-stats [32m200[0m 28.261 ms - 816[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/info [32m200[0m 25.712 ms - 513[0m
+2026-03-09 14:29 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:29 +05:30: Access granted: User is super admin
+2026-03-09 14:29 +05:30: [0mGET /api/system/memory [32m200[0m 19.854 ms - 295[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/processes [36m304[0m 18.777 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 1.328 ms - 93[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/health [32m200[0m 51.291 ms - 269[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/cpu [32m200[0m 17.119 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/network [36m304[0m 21.125 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773046784459 [32m200[0m 83.944 ms - 591[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/performance [32m200[0m 60.159 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/activity?period=today&limit=10 [33m404[0m 0.628 ms - 93[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.117 ms - 816[0m
+2026-03-09 14:29 +05:30: [0mGET /api/stats/dashboard [32m200[0m 129.884 ms - -[0m
+2026-03-09 14:29 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-09 14:29 +05:30: Access granted: User is super admin
+2026-03-09 14:29 +05:30: [0mGET /api/stats/dashboard [32m200[0m 10.204 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/memory [32m200[0m 33.964 ms - 296[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/cpu [32m200[0m 36.586 ms - -[0m
+2026-03-09 14:29 +05:30: [0mGET /api/system/performance [32m200[0m 41.859 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/memory [32m200[0m 26.490 ms - 297[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/info [32m200[0m 29.496 ms - 512[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/processes [36m304[0m 29.005 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/cpu [32m200[0m 27.812 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/performance [32m200[0m 31.476 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/health [32m200[0m 5.762 ms - 269[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/network [36m304[0m 19.228 ms - -[0m
+2026-03-09 14:30 +05:30: [0mGET /api/system/process-stats [32m200[0m 15.703 ms - 816[0m
