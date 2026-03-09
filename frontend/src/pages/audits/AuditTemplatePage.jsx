@@ -13,7 +13,9 @@ const AuditTemplatePage = () => {
   const [fields, setFields] = useState([]);
   const [answers, setAnswers] = useState({});
   const [activeSlot, setActiveSlot] = useState(null);
+  const [templateId, setTemplateId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
 
   /* ===============================
      CHECK STATE
@@ -72,6 +74,8 @@ const AuditTemplatePage = () => {
 
         const template = templates[0];
 
+        setTemplateId(template.id);
+
         const schema =
           typeof template.schema_json === "string"
             ? JSON.parse(template.schema_json)
@@ -122,23 +126,33 @@ const AuditTemplatePage = () => {
       return;
     }
 
+    if (!templateId) {
+      toast.error("Template not loaded yet");
+      return;
+    }
+
     try {
+
+      setSubmitting(true);
 
       const payload = {
         entity_type: state.entityType,
         entity_id: state.entityId,
+        entity_name: state.entityName,
+        template_id: templateId,
+        template_name: state.reportType,
         slot_id: activeSlot.id,
-        answers
+        auditor_name: state.auditor,
+        audit_date: state.date,
+        audit_time: state.time,
+        answers,
       };
 
-      await apiService.post(
-        endpoints.submissions.create,
-        payload
-      );
+      await apiService.post(endpoints.audit.save, payload);
 
       toast.success("Audit submitted successfully");
 
-      navigate(-1);
+      navigate("/audit-list");
 
     }
     catch (e) {
@@ -146,6 +160,9 @@ const AuditTemplatePage = () => {
       console.error(e);
       toast.error("Audit submission failed");
 
+    }
+    finally {
+      setSubmitting(false);
     }
 
   };
@@ -268,10 +285,10 @@ const AuditTemplatePage = () => {
 
           <button
             onClick={handleSubmit}
-            disabled={!activeSlot}
+            disabled={!activeSlot || submitting || !templateId}
             className="px-6 py-3 rounded-xl bg-primary-600 text-white font-bold hover:bg-primary-700 disabled:opacity-50"
           >
-            Submit Audit
+            {submitting ? "Submitting..." : "Submit Audit"}
           </button>
 
         </div>

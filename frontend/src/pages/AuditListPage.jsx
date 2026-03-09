@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import {
   Search,
@@ -13,22 +13,15 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
-/* ================= MOCK DATA ================= */
-
-const mockAudits = Array.from({ length: 28 }, (_, i) => ({
-  id: `AUD-${String(i + 1).padStart(3, "0")}`,
-  title: `Manufacturing Line Audit ${i + 1}`,
-  auditor: ["Rajnish", "Amit", "Sonal", "Ravi", "Neha"][i % 5],
-  date: `2026-03-${String((i % 28) + 1).padStart(2, "0")}`,
-  status: ["completed", "upcoming", "pending", "action-required"][i % 4],
-  plant: ["Gurgaon", "Noida", "Bhiwadi"][i % 3],
-}));
+import { apiService, endpoints } from "../utils/api";
 
 /* ================= MAIN PAGE ================= */
 
 const AuditListPage = () => {
   const navigate = useNavigate();
+
+  const [audits, setAudits] = useState([]);
+  const [loadingAudits, setLoadingAudits] = useState(true);
 
   const [activeTab, setActiveTab] = useState("my");
   const [search, setSearch] = useState("");
@@ -39,7 +32,6 @@ const AuditListPage = () => {
   // Filters (draft in drawer)
   const [draftStatuses, setDraftStatuses] = useState([]);
   const [draftAuditors, setDraftAuditors] = useState([]);
-  const [draftPlants, setDraftPlants] = useState([]);
   const [draftFrom, setDraftFrom] = useState("");
   const [draftTo, setDraftTo] = useState("");
 
@@ -47,53 +39,59 @@ const AuditListPage = () => {
   const [applied, setApplied] = useState({
     statuses: [],
     auditors: [],
-    plants: [],
     from: "",
     to: "",
   });
 
+  /* ================= FETCH AUDITS ================= */
+
+  useEffect(() => {
+    const fetchAudits = async () => {
+      try {
+        setLoadingAudits(true);
+        const res = await apiService.get(endpoints.audit.list);
+        const data = res?.data?.data?.audits || [];
+        setAudits(data);
+      } catch (e) {
+        console.error("Failed to load audits", e);
+      } finally {
+        setLoadingAudits(false);
+      }
+    };
+    fetchAudits();
+  }, []);
+
   const allAuditors = useMemo(
-    () => [...new Set(mockAudits.map((a) => a.auditor))],
-    []
-  );
-  const allPlants = useMemo(
-    () => [...new Set(mockAudits.map((a) => a.plant))],
-    []
+    () => [...new Set(audits.map((a) => a.auditor_name).filter(Boolean))],
+    [audits]
   );
 
   const filteredAudits = useMemo(() => {
-    return mockAudits.filter((audit) => {
-      // Search
+    return audits.filter((audit) => {
+      const title = `${audit.entity_name} ${audit.template_name}`;
       const matchSearch =
-        audit.title.toLowerCase().includes(search.toLowerCase()) ||
-        audit.id.toLowerCase().includes(search.toLowerCase());
+        title.toLowerCase().includes(search.toLowerCase()) ||
+        String(audit.id).includes(search);
       if (!matchSearch) return false;
 
-      // Tabs
-      if (activeTab === "upcoming" && audit.status !== "upcoming") return false;
-      if (activeTab === "actions" && audit.status !== "action-required") return false;
-
-      // Applied Filters
       if (applied.statuses.length > 0 && !applied.statuses.includes(audit.status)) return false;
-      if (applied.auditors.length > 0 && !applied.auditors.includes(audit.auditor)) return false;
-      if (applied.plants.length > 0 && !applied.plants.includes(audit.plant)) return false;
+      if (applied.auditors.length > 0 && !applied.auditors.includes(audit.auditor_name)) return false;
 
       if (applied.from) {
-        if (new Date(audit.date) < new Date(applied.from)) return false;
+        if (new Date(audit.audit_date) < new Date(applied.from)) return false;
       }
       if (applied.to) {
-        if (new Date(audit.date) > new Date(applied.to)) return false;
+        if (new Date(audit.audit_date) > new Date(applied.to)) return false;
       }
 
       return true;
     });
-  }, [search, activeTab, applied]);
+  }, [audits, search, applied]);
 
   const appliedChips = useMemo(() => {
     const chips = [];
     applied.statuses.forEach((s) => chips.push({ type: "status", value: s }));
     applied.auditors.forEach((a) => chips.push({ type: "auditor", value: a }));
-    applied.plants.forEach((p) => chips.push({ type: "plant", value: p }));
     if (applied.from) chips.push({ type: "from", value: applied.from });
     if (applied.to) chips.push({ type: "to", value: applied.to });
     return chips;
@@ -103,7 +101,6 @@ const AuditListPage = () => {
     // copy applied -> draft
     setDraftStatuses(applied.statuses);
     setDraftAuditors(applied.auditors);
-    setDraftPlants(applied.plants);
     setDraftFrom(applied.from);
     setDraftTo(applied.to);
     setDrawerOpen(true);
@@ -113,7 +110,6 @@ const AuditListPage = () => {
     setApplied({
       statuses: draftStatuses,
       auditors: draftAuditors,
-      plants: draftPlants,
       from: draftFrom,
       to: draftTo,
     });
@@ -123,13 +119,12 @@ const AuditListPage = () => {
   const clearFilters = () => {
     setDraftStatuses([]);
     setDraftAuditors([]);
-    setDraftPlants([]);
     setDraftFrom("");
     setDraftTo("");
   };
 
   const clearApplied = () => {
-    setApplied({ statuses: [], auditors: [], plants: [], from: "", to: "" });
+    setApplied({ statuses: [], auditors: [], from: "", to: "" });
   };
 
   const removeChip = (chip) => {
@@ -137,7 +132,6 @@ const AuditListPage = () => {
       const next = { ...prev };
       if (chip.type === "status") next.statuses = next.statuses.filter((x) => x !== chip.value);
       if (chip.type === "auditor") next.auditors = next.auditors.filter((x) => x !== chip.value);
-      if (chip.type === "plant") next.plants = next.plants.filter((x) => x !== chip.value);
       if (chip.type === "from") next.from = "";
       if (chip.type === "to") next.to = "";
       return next;
@@ -207,8 +201,6 @@ const AuditListPage = () => {
                     ? `Status: ${humanStatus(c.value)}`
                     : c.type === "auditor"
                     ? `Auditor: ${c.value}`
-                    : c.type === "plant"
-                    ? `Plant: ${c.value}`
                     : c.type === "from"
                     ? `From: ${c.value}`
                     : `To: ${c.value}`
@@ -234,7 +226,9 @@ const AuditListPage = () => {
           </div>
 
           <div className="p-6 space-y-3">
-            {filteredAudits.length === 0 ? (
+            {loadingAudits ? (
+              <div className="text-center py-10 text-gray-500 dark:text-gray-400 text-sm">Loading audits...</div>
+            ) : filteredAudits.length === 0 ? (
               <EmptyState />
             ) : (
               filteredAudits.map((audit) => (
@@ -257,21 +251,18 @@ const AuditListPage = () => {
           draft={{
             statuses: draftStatuses,
             auditors: draftAuditors,
-            plants: draftPlants,
             from: draftFrom,
             to: draftTo,
           }}
           setDraft={{
             setStatuses: setDraftStatuses,
             setAuditors: setDraftAuditors,
-            setPlants: setDraftPlants,
             setFrom: setDraftFrom,
             setTo: setDraftTo,
           }}
           options={{
             auditors: allAuditors,
-            plants: allPlants,
-            statuses: ["completed", "pending", "upcoming", "action-required"],
+            statuses: ["submitted", "draft"],
           }}
         />
       </div>
@@ -317,16 +308,18 @@ const AuditCard = ({ audit, onOpen }) => (
     className="w-full text-left p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition flex justify-between items-center"
   >
     <div>
-      <div className="font-medium text-gray-800 dark:text-white">{audit.title}</div>
+      <div className="font-medium text-gray-800 dark:text-white">
+        {audit.entity_name} — {audit.template_name}
+      </div>
       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mt-1">
         <span className="flex items-center gap-1">
-          <Calendar size={14} /> {audit.date}
+          <Calendar size={14} /> {audit.audit_date}
         </span>
         <span className="flex items-center gap-1">
-          <User size={14} /> {audit.auditor}
+          <User size={14} /> {audit.auditor_name || "—"}
         </span>
-        <span className="text-xs px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-700">
-          {audit.plant}
+        <span className="text-xs px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-700 capitalize">
+          {audit.entity_type}
         </span>
       </div>
     </div>
@@ -340,29 +333,23 @@ const AuditCard = ({ audit, onOpen }) => (
 
 const StatusBadge = ({ status }) => {
   const config = {
-    completed: {
-      label: "Completed",
+    submitted: {
+      label: "Submitted",
       icon: <CheckCircle2 size={14} />,
       className: "bg-green-100 text-green-700 dark:bg-green-600 dark:text-white",
     },
-    upcoming: {
-      label: "Upcoming",
-      icon: <Clock size={14} />,
-      className: "bg-blue-100 text-blue-700 dark:bg-blue-600 dark:text-white",
-    },
-    pending: {
-      label: "Pending",
+    draft: {
+      label: "Draft",
       icon: <Clock size={14} />,
       className: "bg-yellow-100 text-yellow-700 dark:bg-yellow-500 dark:text-black",
     },
-    "action-required": {
-      label: "Action Required",
-      icon: <AlertCircle size={14} />,
-      className: "bg-red-100 text-red-700 dark:bg-red-600 dark:text-white",
-    },
   };
 
-  const s = config[status] || config.pending;
+  const s = config[status] || {
+    label: status ?? "Unknown",
+    icon: <AlertCircle size={14} />,
+    className: "bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-white",
+  };
 
   return (
     <div className={`px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1 ${s.className}`}>
@@ -412,15 +399,6 @@ const FilterDrawer = ({ open, onClose, onApply, onClear, draft, setDraft, option
             values={draft.auditors}
             setValues={setDraft.setAuditors}
             options={options.auditors.map((a) => ({ label: a, value: a }))}
-          />
-        </Section>
-
-        {/* Plant multi-select */}
-        <Section title="Plant">
-          <MultiSelect
-            values={draft.plants}
-            setValues={setDraft.setPlants}
-            options={options.plants.map((p) => ({ label: p, value: p }))}
           />
         </Section>
 
