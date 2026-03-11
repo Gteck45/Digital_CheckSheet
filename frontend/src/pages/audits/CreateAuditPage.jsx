@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import { apiService, endpoints } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import { Calendar, Clock, Package, User } from "lucide-react";
+import { Calendar, Clock, Package, User,ArrowLeft } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 
 export default function CreateAuditPage() {
@@ -11,23 +11,23 @@ export default function CreateAuditPage() {
   const navigate = useNavigate();
   const { user } = useAuth();
 
-  const [entityType,setEntityType] = useState("line");
-  const [entityList,setEntityList] = useState([]);
-  const [entityId,setEntityId] = useState("");
+  const [entityType, setEntityType] = useState("line");
+  const [entityList, setEntityList] = useState([]);
+  const [entityId, setEntityId] = useState("");
 
-  const [reportType,setReportType] = useState("");
-  const [slots,setSlots] = useState([]);
+  const [reportType, setReportType] = useState("");
+  const [slots, setSlots] = useState([]);
 
-  const [date,setDate] = useState("");
-  const [time,setTime] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
 
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const auditor = user?.name || user?.username || "Unknown";
 
   /* ===============================
      SYSTEM DATE TIME
-  ==============================*/
+  ============================== */
 
   const getSystemDateTime = () => {
 
@@ -35,18 +35,18 @@ export default function CreateAuditPage() {
 
     return {
       date: now.toISOString().split("T")[0],
-      time: now.toTimeString().slice(0,5)
+      time: now.toTimeString().slice(0, 5)
     };
 
   };
 
   /* ===============================
      LOAD ENTITIES
-  ==============================*/
+  ============================== */
 
-  const loadEntities = async(type)=>{
+  const loadEntities = async (type) => {
 
-    try{
+    try {
 
       const url =
         type === "line"
@@ -58,12 +58,17 @@ export default function CreateAuditPage() {
       const res = await apiService.get(url);
 
       const root = res?.data?.data ?? res?.data ?? {};
-      const arr = root.items || root.lines || root.stations || root.models || root;
+
+      const arr =
+        root.items ||
+        root.lines ||
+        root.stations ||
+        root.models ||
+        root;
 
       setEntityList(Array.isArray(arr) ? arr : []);
 
-    }
-    catch(e){
+    } catch (e) {
 
       console.error(e);
       toast.error("Failed to load entities");
@@ -74,71 +79,95 @@ export default function CreateAuditPage() {
 
   /* ===============================
      LOAD TEMPLATE + SLOT
-  ==============================*/
+  ============================== */
 
-  const loadAuditConfig = async(type,id)=>{
+  const loadAuditConfig = async (type, id) => {
 
-    if(!id) return;
+    if (!id) return;
 
-    try{
+    try {
 
       setLoading(true);
 
-      /* TEMPLATE */
+      const [templateRes, slotRes] = await Promise.all([
 
-      const templateRes = await apiService.get(
-        endpoints.templates.list,
-        {
-          params:{
-            entity_type:type,
-            entity_id:id
+        apiService.get(endpoints.templates.list, {
+          params: {
+            entity_type: type,
+            entity_id: id
           }
-        }
-      );
+        }),
+
+        apiService.get(endpoints.inspectionSlots.list)
+
+      ]);
+
+      /* ================= TEMPLATE ================= */
 
       const templates = templateRes?.data?.data?.templates || [];
 
-      if(!templates.length){
+      const selectedEntity =
+        entityList.find(e => e.id == id)?.name ||
+        entityList.find(e => e.id == id)?.model_name ||
+        entityList.find(e => e.id == id)?.title ||
+        "";
+
+      const matchedTemplate = templates.find(
+  t =>
+    String(t.entity_type).toLowerCase() === String(type).toLowerCase() &&
+    String(t.entity_id) === String(id)
+);
+
+      if (!matchedTemplate) {
 
         setReportType("");
-        toast.error("Template not found");
+        toast.error("Matching template not found");
+
+      } else {
+
+        setReportType(matchedTemplate.name);
 
       }
-      else{
 
-        setReportType(templates[0].name);
-
-      }
-
-      /* SLOTS */
-
-      const slotRes = await apiService.get(
-        endpoints.inspectionSlots.list
-      );
+      /* ================= SLOT LOGIC ================= */
 
       const allSlots = slotRes?.data?.data?.slots || [];
 
-      const activeSlots = allSlots.filter(
-        s => s.runtime_status === "OPEN" || s.runtime_status === "GRACE"
+      let selectedSlots = [];
+
+      const graceSlots = allSlots.filter(
+        s => s.runtime_status === "GRACE"
       );
 
-      setSlots(activeSlots);
+      if (graceSlots.length > 0) {
 
-      /* SYSTEM DATE TIME */
+        selectedSlots = graceSlots;
+
+      } else {
+
+        const openSlots = allSlots.filter(
+          s => s.runtime_status === "OPEN"
+        );
+
+        selectedSlots = openSlots;
+
+      }
+
+      setSlots(selectedSlots);
+
+      /* ================= DATE TIME ================= */
 
       const system = getSystemDateTime();
 
       setDate(system.date);
       setTime(system.time);
 
-    }
-    catch(e){
+    } catch (e) {
 
       console.error(e);
       toast.error("Failed to load audit configuration");
 
-    }
-    finally{
+    } finally {
 
       setLoading(false);
 
@@ -148,9 +177,9 @@ export default function CreateAuditPage() {
 
   /* ===============================
      INITIAL LOAD
-  ==============================*/
+  ============================== */
 
-  useEffect(()=>{
+  useEffect(() => {
 
     loadEntities(entityType);
 
@@ -158,30 +187,30 @@ export default function CreateAuditPage() {
     setReportType("");
     setSlots([]);
 
-  },[entityType]);
+  }, [entityType]);
 
   /* ===============================
      NEXT STEP
-  ==============================*/
+  ============================== */
 
-  const handleNext = ()=>{
+  const handleNext = () => {
 
-    if(!entityId)
+    if (!entityId)
       return toast.error("Select entity first");
 
-    if(!reportType)
+    if (!reportType)
       return toast.error("Template not found");
 
-    if (!slots || slots.length === 0)
-    return toast.error("No active slot available right now");
+    if (!slots?.length)
+      return toast.error("No active slot available");
 
     const entityName =
-      entityList.find(e=>e.id == entityId)?.name ||
-      entityList.find(e=>e.id == entityId)?.model_name ||
+      entityList.find(e => e.id == entityId)?.name ||
+      entityList.find(e => e.id == entityId)?.model_name ||
       "Unknown";
 
-    navigate("/audits/new/template",{
-      state:{
+    navigate("/audits/new/template", {
+      state: {
         entityType,
         entityId,
         entityName,
@@ -195,7 +224,7 @@ export default function CreateAuditPage() {
 
   };
 
-  return(
+  return (
 
     <Layout>
 
@@ -203,17 +232,6 @@ export default function CreateAuditPage() {
 
         {/* HEADER */}
 
-        <div>
-
-          <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">
-            Start New Audit
-          </h1>
-
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Select entity type and entity to start audit
-          </p>
-
-        </div>
 
         {/* ENTITY SELECTION */}
 
@@ -229,7 +247,7 @@ export default function CreateAuditPage() {
 
             <select
               value={entityType}
-              onChange={(e)=>setEntityType(e.target.value)}
+              onChange={(e) => setEntityType(e.target.value)}
               className="mt-2 w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
             >
 
@@ -251,13 +269,13 @@ export default function CreateAuditPage() {
 
             <select
               value={entityId}
-              onChange={(e)=>{
+              onChange={(e) => {
 
                 const val = e.target.value;
 
                 setEntityId(val);
 
-                loadAuditConfig(entityType,val);
+                loadAuditConfig(entityType, val);
 
               }}
               className="mt-2 w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
@@ -265,7 +283,7 @@ export default function CreateAuditPage() {
 
               <option value="">Select {entityType}</option>
 
-              {entityList.map(item =>(
+              {entityList.map(item => (
 
                 <option key={item.id} value={item.id}>
                   {item.name || item.model_name || item.title}
@@ -283,16 +301,16 @@ export default function CreateAuditPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
 
-          <InfoCard icon={<Package size={14}/>} label="Report Type" value={reportType}/>
-          <InfoCard icon={<User size={14}/>} label="Auditor" value={auditor}/>
-          <InfoCard icon={<Calendar size={14}/>} label="Date" value={date}/>
-          <InfoCard icon={<Clock size={14}/>} label="Time" value={time}/>
+          <InfoCard icon={<Package size={14} />} label="Report Name" value={reportType} />
+          <InfoCard icon={<User size={14} />} label="Auditor" value={auditor} />
+          <InfoCard icon={<Calendar size={14} />} label="Date" value={date} />
+          <InfoCard icon={<Clock size={14} />} label="Time" value={time} />
 
         </div>
 
         {/* ACTIVE SLOTS */}
 
-        {slots.length > 0 &&(
+        {slots.length > 0 && (
 
           <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4">
 
@@ -302,13 +320,13 @@ export default function CreateAuditPage() {
 
             <div className="flex flex-wrap gap-2">
 
-              {slots.map(s =>(
+              {slots.map(s => (
 
                 <span
                   key={s.id}
                   className="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300"
                 >
-                  {s.slot_id} ({s.start_time.slice(0,5)} - {s.end_time.slice(0,5)})
+                  {s.slot_id} ({s.start_time.slice(0, 5)} - {s.end_time.slice(0, 5)})
                 </span>
 
               ))}
@@ -324,7 +342,7 @@ export default function CreateAuditPage() {
         <div className="flex justify-end">
 
           <button
-  disabled={!reportType || loading || slots.length === 0}
+            disabled={!reportType || loading || slots.length === 0}
             onClick={handleNext}
             className="px-6 py-3 rounded-2xl bg-primary-600 text-white font-extrabold disabled:opacity-60"
           >
@@ -345,9 +363,9 @@ export default function CreateAuditPage() {
 
 /* ===============================
    INFO CARD
-===============================*/
+=============================== */
 
-const InfoCard = ({icon,label,value}) =>(
+const InfoCard = ({ icon, label, value }) => (
 
   <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4">
 
