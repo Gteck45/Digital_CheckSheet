@@ -1793,3 +1793,151 @@
 2026-03-11 22:37 +05:30: 📊 Environment: development
 2026-03-11 22:37 +05:30: 🔗 Health: http://127.0.0.1:5000/health
 2026-03-11 22:37 +05:30: 📚 API: http://127.0.0.1:5000/api
+2026-03-12 10:06 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-12 10:06 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-12 10:06 +05:30: ✅ Created activity_logs table
+2026-03-12 10:06 +05:30: ✅ Created login_activities table
+2026-03-12 10:06 +05:30: ✅ Created api_stats table
+2026-03-12 10:06 +05:30: ✅ Tables Created
+2026-03-12 10:06 +05:30: ✅ Pages Seeded
+2026-03-12 10:06 +05:30: ℹ️ Super Admin Exists
+2026-03-12 10:06 +05:30: ✅ Database Initialized
+2026-03-12 10:06 +05:30: ✅ Database connected successfully
+2026-03-12 10:06 +05:30: 🚀 Digital Checksheet Backend running on http://127.0.0.1:5000
+2026-03-12 10:06 +05:30: 📊 Environment: development
+2026-03-12 10:06 +05:30: 🔗 Health: http://127.0.0.1:5000/health
+2026-03-12 10:06 +05:30: 📚 API: http://127.0.0.1:5000/api
+2026-03-12 15:11 +05:30: [0mGET /api/system/info [32m200[0m 82.796 ms - 496[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/memory [32m200[0m 97.191 ms - 300[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/health [32m200[0m 124.830 ms - 269[0m
+2026-03-12 15:11 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308468516 [32m200[0m 143.055 ms - 778[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/cpu [32m200[0m 102.770 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/performance [32m200[0m 97.547 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/processes [36m304[0m 33.488 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/network [36m304[0m 47.581 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/process-stats [32m200[0m 50.165 ms - 819[0m
+2026-03-12 15:11 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-12 15:11 +05:30: Access granted: User is super admin
+2026-03-12 15:11 +05:30: [0mGET /api/system/info [32m200[0m 46.179 ms - 495[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/memory [32m200[0m 47.496 ms - 299[0m
+2026-03-12 15:11 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308468521 [32m200[0m 107.561 ms - 778[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/processes [36m304[0m 52.946 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/network [36m304[0m 60.890 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/health [32m200[0m 147.893 ms - 269[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/cpu [32m200[0m 149.170 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/performance [32m200[0m 54.926 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/system/process-stats [32m200[0m 18.000 ms - 819[0m
+2026-03-12 15:11 +05:30: [0mGET /api/stats/dashboard [32m200[0m 222.641 ms - -[0m
+2026-03-12 15:11 +05:30: requireAssignedPages check for user: superadmin (ID: 1), roles: super_admin
+2026-03-12 15:11 +05:30: Access granted: User is super admin
+2026-03-12 15:11 +05:30: [0mGET /api/stats/dashboard [32m200[0m 18.318 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308470990 [32m200[0m 7.563 ms - 778[0m
+2026-03-12 15:11 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308470991 [32m200[0m 11.702 ms - 778[0m
+2026-03-12 15:11 +05:30: [0mGET /api/templates [36m304[0m 29.680 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/templates [36m304[0m 2.849 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/templates/4 [36m304[0m 9.813 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308475726 [32m200[0m 22.797 ms - 778[0m
+2026-03-12 15:11 +05:30: [0mGET /api/templates/4 [36m304[0m 5.757 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308475727 [32m200[0m 22.702 ms - 778[0m
+2026-03-12 15:11 +05:30: [0mGET /api/stations [36m304[0m 18.684 ms - -[0m
+2026-03-12 15:11 +05:30: [0mGET /api/stations [36m304[0m 1.434 ms - -[0m
+2026-03-12 15:12 +05:30: [0mPUT /api/templates/4 [32m200[0m 39.512 ms - 36[0m
+2026-03-12 15:12 +05:30: [0mGET /api/templates [32m200[0m 5.611 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308551507 [32m200[0m 21.002 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308551509 [32m200[0m 15.400 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/templates [36m304[0m 7.913 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308557670 [32m200[0m 20.642 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308557671 [32m200[0m 23.520 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/submissions/4 [32m200[0m 42.642 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/submissions/4 [32m200[0m 2.389 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/templates [36m304[0m 2.331 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308560787 [32m200[0m 13.354 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/templates [36m304[0m 5.842 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308560787 [36m304[0m 10.281 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308562794 [32m200[0m 5.941 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308562795 [32m200[0m 19.467 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/audit [32m200[0m 38.884 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/audit [36m304[0m 6.349 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308566996 [32m200[0m 30.208 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308566997 [32m200[0m 27.175 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/lines [36m304[0m 37.439 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/lines [36m304[0m 3.325 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/stations [36m304[0m 2.702 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/templates?entity_type=station&entity_id=2 [32m200[0m 1.842 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/inspection_slots [32m200[0m 19.564 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/inspection_slots [36m304[0m 2.417 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [32m200[0m 2.099 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308576722 [32m200[0m 17.074 ms - 778[0m
+2026-03-12 15:12 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [36m304[0m 12.487 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [36m304[0m 2.908 ms - -[0m
+2026-03-12 15:12 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308576723 [32m200[0m 22.659 ms - 778[0m
+2026-03-12 15:13 +05:30: [0mGET /api/templates [36m304[0m 3.347 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308582121 [32m200[0m 13.354 ms - 778[0m
+2026-03-12 15:13 +05:30: [0mGET /api/templates [36m304[0m 6.640 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308582121 [36m304[0m 12.865 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308584744 [32m200[0m 21.440 ms - 778[0m
+2026-03-12 15:13 +05:30: [0mGET /api/submissions/4 [32m200[0m 15.970 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308584745 [32m200[0m 19.697 ms - 778[0m
+2026-03-12 15:13 +05:30: [0mGET /api/submissions/4 [32m200[0m 6.939 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/templates [36m304[0m 3.002 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308587635 [32m200[0m 16.322 ms - 778[0m
+2026-03-12 15:13 +05:30: [0mGET /api/templates [36m304[0m 5.709 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308587635 [36m304[0m 24.194 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/templates/4 [32m200[0m 2.537 ms - 788[0m
+2026-03-12 15:13 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308589898 [32m200[0m 13.853 ms - 778[0m
+2026-03-12 15:13 +05:30: [0mGET /api/templates/4 [36m304[0m 8.709 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308589898 [36m304[0m 10.075 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/stations [36m304[0m 2.474 ms - -[0m
+2026-03-12 15:13 +05:30: [0mGET /api/stations [36m304[0m 2.959 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308705719 [32m200[0m 46.160 ms - 778[0m
+2026-03-12 15:15 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308705720 [32m200[0m 40.625 ms - 778[0m
+2026-03-12 15:15 +05:30: [0mGET /api/audit [36m304[0m 62.863 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/audit [36m304[0m 16.248 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/lines [36m304[0m 7.327 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308708374 [32m200[0m 25.814 ms - 778[0m
+2026-03-12 15:15 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308708375 [32m200[0m 26.272 ms - 778[0m
+2026-03-12 15:15 +05:30: [0mGET /api/lines [36m304[0m 8.874 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/stations [36m304[0m 3.310 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/templates?entity_type=station&entity_id=2 [36m304[0m 7.603 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/inspection_slots [36m304[0m 8.625 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [36m304[0m 3.502 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/inspection_slots [36m304[0m 7.231 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [36m304[0m 8.581 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308720260 [32m200[0m 21.290 ms - 778[0m
+2026-03-12 15:15 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [36m304[0m 9.568 ms - -[0m
+2026-03-12 15:15 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773308720261 [32m200[0m 26.493 ms - 778[0m
+2026-03-12 15:25 +05:30: [0mGET /api/templates [36m304[0m 20.781 ms - -[0m
+2026-03-12 15:25 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309312239 [32m200[0m 36.856 ms - 778[0m
+2026-03-12 15:25 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309312237 [32m200[0m 69.997 ms - 778[0m
+2026-03-12 15:25 +05:30: [0mGET /api/templates [36m304[0m 34.874 ms - -[0m
+2026-03-12 15:25 +05:30: [0mGET /api/templates/4 [36m304[0m 5.491 ms - -[0m
+2026-03-12 15:25 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309315703 [32m200[0m 18.468 ms - 778[0m
+2026-03-12 15:25 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309315702 [32m200[0m 25.574 ms - 778[0m
+2026-03-12 15:25 +05:30: [0mGET /api/templates/4 [36m304[0m 21.115 ms - -[0m
+2026-03-12 15:25 +05:30: [0mGET /api/stations [36m304[0m 15.210 ms - -[0m
+2026-03-12 15:25 +05:30: [0mGET /api/stations [36m304[0m 3.266 ms - -[0m
+2026-03-12 15:26 +05:30: [0mGET /api/templates [36m304[0m 8.525 ms - -[0m
+2026-03-12 15:26 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309382763 [32m200[0m 25.991 ms - 778[0m
+2026-03-12 15:26 +05:30: [0mGET /api/templates [36m304[0m 15.033 ms - -[0m
+2026-03-12 15:26 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309382764 [32m200[0m 35.606 ms - 778[0m
+2026-03-12 15:26 +05:30: [0mGET /api/lines [36m304[0m 8.318 ms - -[0m
+2026-03-12 15:26 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309384824 [32m200[0m 25.124 ms - 778[0m
+2026-03-12 15:26 +05:30: [0mGET /api/lines [36m304[0m 3.135 ms - -[0m
+2026-03-12 15:26 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309384825 [32m200[0m 21.502 ms - 778[0m
+2026-03-12 15:26 +05:30: [0mGET /api/lines [36m304[0m 6.496 ms - -[0m
+2026-03-12 15:26 +05:30: [0mGET /api/lines [36m304[0m 2.493 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/audit [36m304[0m 40.658 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309743784 [32m200[0m 91.833 ms - 778[0m
+2026-03-12 15:32 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309743789 [32m200[0m 55.116 ms - 778[0m
+2026-03-12 15:32 +05:30: [0mGET /api/audit [36m304[0m 19.231 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309746074 [32m200[0m 47.392 ms - 778[0m
+2026-03-12 15:32 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309746076 [32m200[0m 25.660 ms - 778[0m
+2026-03-12 15:32 +05:30: [0mGET /api/lines [36m304[0m 32.580 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/lines [36m304[0m 2.326 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/stations [36m304[0m 4.207 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [36m304[0m 4.414 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/inspection_slots [36m304[0m 9.160 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [36m304[0m 3.901 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309753925 [32m200[0m 14.640 ms - 778[0m
+2026-03-12 15:32 +05:30: [0mGET /api/templates?entity_type=station&entity_id=1 [36m304[0m 8.699 ms - -[0m
+2026-03-12 15:32 +05:30: [0mGET /api/pages/my-pages-hierarchy?_t=1773309753925 [36m304[0m 19.432 ms - -[0m
