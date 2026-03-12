@@ -1779,3 +1779,17 @@
 2026-03-09 14:59 +05:30:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
 2026-03-09 14:59 +05:30:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
 2026-03-09 14:59 +05:30:     at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)
+2026-03-11 22:37 +05:30: ⚠️ PM2 disabled on Windows
+2026-03-11 22:37 +05:30: 🔄 Enhanced System Monitor: Continuous monitoring started
+2026-03-11 22:37 +05:30: ✅ Created activity_logs table
+2026-03-11 22:37 +05:30: ✅ Created login_activities table
+2026-03-11 22:37 +05:30: ✅ Created api_stats table
+2026-03-11 22:37 +05:30: ✅ Tables Created
+2026-03-11 22:37 +05:30: ✅ Pages Seeded
+2026-03-11 22:37 +05:30: ℹ️ Super Admin Exists
+2026-03-11 22:37 +05:30: ✅ Database Initialized
+2026-03-11 22:37 +05:30: ✅ Database connected successfully
+2026-03-11 22:37 +05:30: 🚀 Digital Checksheet Backend running on http://127.0.0.1:5000
+2026-03-11 22:37 +05:30: 📊 Environment: development
+2026-03-11 22:37 +05:30: 🔗 Health: http://127.0.0.1:5000/health
+2026-03-11 22:37 +05:30: 📚 API: http://127.0.0.1:5000/api

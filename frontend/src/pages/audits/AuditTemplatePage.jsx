@@ -430,6 +430,30 @@ const Question = ({ question, value, onChange }) => {
 
   }
 
+  if (question.type === "image") {
+
+    return (
+
+      <div>
+
+        <div className="text-sm mb-2 text-gray-700 dark:text-gray-200">
+          {question.label}
+          {question.required && <span className="text-red-500 ml-1">*</span>}
+        </div>
+
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => onChange(question.id, e.target.files[0])}
+          className="w-full px-3 py-2 border rounded-lg bg-white dark:text-white dark:bg-gray-800 dark:border-gray-700"
+        />
+
+      </div>
+
+    );
+
+  }
+
   return null;
 
 };
