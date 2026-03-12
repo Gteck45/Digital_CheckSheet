@@ -121,51 +121,82 @@ const AuditTemplatePage = () => {
 
   const handleSubmit = async () => {
 
-    if (!activeSlot) {
-      toast.error("No active slot available");
-      return;
-    }
+  if (!activeSlot) {
+    toast.error("No active slot available");
+    return;
+  }
 
-    if (!templateId) {
-      toast.error("Template not loaded yet");
-      return;
-    }
+  if (!templateId) {
+    toast.error("Template not loaded yet");
+    return;
+  }
 
-    try {
+  try {
 
-      setSubmitting(true);
+    setSubmitting(true);
 
-      const payload = {
-        entity_type: state.entityType,
-        entity_id: state.entityId,
-        entity_name: state.entityName,
-        template_id: templateId,
-        template_name: state.reportType,
-        slot_id: activeSlot.id,
-        auditor_name: state.auditor,
-        audit_date: state.date,
-        audit_time: state.time,
-        answers,
-      };
+    const formData = new FormData();
 
-      await apiService.post(endpoints.audit.save, payload);
+    formData.append("entity_type", state.entityType);
+    formData.append("entity_id", state.entityId);
+    formData.append("entity_name", state.entityName);
+    formData.append("template_id", templateId);
+    formData.append("template_name", state.reportType);
+    formData.append("slot_id", activeSlot.id);
+    formData.append("auditor_name", state.auditor);
+    formData.append("audit_date", state.date);
+    formData.append("audit_time", state.time);
 
-      toast.success("Audit submitted successfully");
+    /* ============================
+       HANDLE ANSWERS + IMAGES
+    ============================ */
 
-      navigate("/audit-list");
+    const answersData = {};
 
-    }
-    catch (e) {
+    Object.keys(answers).forEach(key => {
 
-      console.error(e);
-      toast.error("Audit submission failed");
+      const value = answers[key];
 
-    }
-    finally {
-      setSubmitting(false);
-    }
+      if (value instanceof File) {
 
-  };
+        formData.append(`image_${key}`, value);
+
+      } else {
+
+        answersData[key] = value;
+
+      }
+
+    });
+
+    formData.append("answers", JSON.stringify(answersData));
+
+    await apiService.post(
+      endpoints.audit.save,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      }
+    );
+
+    toast.success("Audit submitted successfully");
+
+    navigate("/audit-list");
+
+  }
+  catch (e) {
+
+    console.error(e);
+    toast.error("Audit submission failed");
+
+  }
+  finally {
+    setSubmitting(false);
+  }
+
+};
 
   return (
     <Layout>
@@ -324,111 +355,178 @@ const Info = ({ label, value, icon }) => (
 
 
 /* QUESTION COMPONENT */
-
 const Question = ({ question, value, onChange }) => {
 
-  if (question.type === "text" || question.type === "number") {
+  const [location, setLocation] = useState(null);
+  const [preview, setPreview] = useState(null);
+  const [cameraOpen, setCameraOpen] = useState(false);
+  const [stream, setStream] = useState(null);
+
+  const videoRef = React.useRef(null);
+  const canvasRef = React.useRef(null);
+
+  /* Attach stream to video */
+  useEffect(() => {
+    if (videoRef.current && stream) {
+      videoRef.current.srcObject = stream;
+    }
+  }, [stream]);
+
+  /* Get GPS once */
+  useEffect(() => {
+    if (!navigator.geolocation) return;
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setLocation({
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude
+        });
+      },
+      () => {},
+      { enableHighAccuracy: true, timeout: 10000 }
+    );
+  }, []);
+
+  /* FILE UPLOAD */
+  const handleFile = (file) => {
+
+    if (!file) return;
+
+    const url = URL.createObjectURL(file);
+    setPreview(url);
+
+    onChange(question.id, file);
+
+  };
+
+  /* OPEN CAMERA */
+
+  const openCamera = async () => {
+
+    try {
+
+      const mediaStream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: { ideal: "environment" } }
+      });
+
+      setStream(mediaStream);
+      setCameraOpen(true);
+
+    } catch (err) {
+
+      console.error(err);
+      toast.error("Camera access denied");
+
+    }
+
+  };
+
+  /* CAPTURE PHOTO */
+
+  const capturePhoto = () => {
+
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+
+    if (!video) return;
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    const ctx = canvas.getContext("2d");
+
+    ctx.drawImage(video, 0, 0);
+
+    /* WATERMARK */
+
+    const now = new Date();
+    const date = now.toLocaleDateString("en-IN");
+    const time = now.toLocaleTimeString("en-IN");
+
+    const lat = location?.lat?.toFixed(5) || "N/A";
+    const lng = location?.lng?.toFixed(5) || "N/A";
+
+    const watermark = `${date} ${time} | ${lat}, ${lng}`;
+
+    ctx.font = "20px Arial";
+    ctx.fillStyle = "rgba(0,0,0,0.6)";
+    ctx.fillRect(10, canvas.height - 45, 420, 35);
+
+    ctx.fillStyle = "white";
+    ctx.fillText(watermark, 15, canvas.height - 20);
+
+    /* CONVERT TO FILE */
+
+    canvas.toBlob((blob) => {
+
+      const file = new File(
+        [blob],
+        `audit_${Date.now()}.jpg`,
+        { type: "image/jpeg" }
+      );
+
+      setPreview(URL.createObjectURL(file));
+
+      onChange(question.id, file);
+
+    }, "image/jpeg", 0.9);
+
+    /* STOP CAMERA */
+
+    stream?.getTracks().forEach(track => track.stop());
+    setCameraOpen(false);
+    setStream(null);
+
+  };
+
+  /* ===============================
+     TEXT
+  =============================== */
+
+  if (question.type === "text") {
 
     return (
       <div>
-
-        <div className="text-sm mb-2 text-gray-700 dark:text-gray-200">
-          {question.label}
-          {question.required && <span className="text-red-500 ml-1">*</span>}
-        </div>
-
-        <input
-          type={question.type}
-          value={value || ""}
-          onChange={(e) => onChange(question.id, e.target.value)}
-          className="w-full px-3 py-2 border rounded-lg bg-white dark:text-white dark:bg-gray-800 dark:border-gray-700"
-        />
-
-      </div>
-    );
-
-  }
-
-  if (question.type === "radio") {
-
-    return (
-
-      <div>
-
-        <div className="text-sm mb-2 text-gray-700 dark:text-gray-200">
-          {question.label}
-        </div>
-
-        <div className="flex gap-2 flex-wrap">
-
-          {question.options?.map(opt => (
-
-            <button
-              key={opt}
-              onClick={() => onChange(question.id, opt)}
-              className={`px-3 py-1 rounded ${
-                value === opt
-                  ? "bg-green-500 text-white"
-                  : "bg-gray-200 dark:bg-gray-700"
-              }`}
-            >
-              {opt}
-            </button>
-
-          ))}
-
-        </div>
-
-      </div>
-
-    );
-
-  }
-
-  if (question.type === "checkbox") {
-
-    return (
-
-      <div className="flex items-center gap-2">
-
-        <input
-          type="checkbox"
-          checked={value || false}
-          onChange={(e) => onChange(question.id, e.target.checked)}
-        />
-
-        <span className="text-gray-700 dark:text-gray-200">
-          {question.label}
-        </span>
-
-      </div>
-
-    );
-
-  }
-
-  if (question.type === "date") {
-
-    return (
-
-      <div>
-
-        <div className="text-sm mb-2 text-gray-700 dark:text-gray-200">
+        <div className="text-sm mb-2">
           {question.label}
         </div>
 
         <input
-          type="date"
+          type="text"
           value={value || ""}
           onChange={(e) => onChange(question.id, e.target.value)}
           className="w-full px-3 py-2 border rounded-lg"
         />
-
       </div>
-
     );
 
   }
+
+  /* ===============================
+     NUMBER
+  =============================== */
+
+  if (question.type === "number") {
+
+    return (
+      <div>
+        <div className="text-sm mb-2">{question.label}</div>
+
+        <input
+          type="number"
+          value={value || ""}
+          onChange={(e) => onChange(question.id, e.target.value)}
+          className="w-full px-3 py-2 border rounded-lg"
+        />
+      </div>
+    );
+
+  }
+
+  /* ===============================
+     IMAGE
+  =============================== */
 
   if (question.type === "image") {
 
@@ -436,17 +534,64 @@ const Question = ({ question, value, onChange }) => {
 
       <div>
 
-        <div className="text-sm mb-2 text-gray-700 dark:text-gray-200">
-          {question.label}
-          {question.required && <span className="text-red-500 ml-1">*</span>}
-        </div>
+        <div className="text-sm mb-2">{question.label}</div>
+
+        {/* PREVIEW */}
+
+        {preview && (
+          <img
+            src={preview}
+            alt="preview"
+            className="mb-3 rounded-lg max-h-48 border"
+          />
+        )}
+
+        {/* FILE INPUT */}
 
         <input
           type="file"
           accept="image/*"
-          onChange={(e) => onChange(question.id, e.target.files[0])}
-          className="w-full px-3 py-2 border rounded-lg bg-white dark:text-white dark:bg-gray-800 dark:border-gray-700"
+          capture="environment"
+          onChange={(e) => handleFile(e.target.files[0])}
+          className="w-full px-3 py-2 border rounded-lg mb-2"
         />
+
+        {/* CAMERA BUTTON */}
+
+        <button
+          type="button"
+          onClick={openCamera}
+          className="px-3 py-2 bg-blue-600 text-white rounded-lg text-sm"
+        >
+          Open Camera
+        </button>
+
+        {/* CAMERA STREAM */}
+
+        {cameraOpen && (
+
+          <div className="mt-3 space-y-2">
+
+            <video
+              ref={videoRef}
+              autoPlay
+              playsInline
+              className="rounded-lg border max-h-60"
+            />
+
+            <button
+              type="button"
+              onClick={capturePhoto}
+              className="px-3 py-2 bg-green-600 text-white rounded-lg text-sm"
+            >
+              Capture Photo
+            </button>
+
+            <canvas ref={canvasRef} style={{ display: "none" }} />
+
+          </div>
+
+        )}
 
       </div>
 

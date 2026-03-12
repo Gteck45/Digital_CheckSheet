@@ -209,36 +209,71 @@ const MetaCard = ({ icon, label, value }) => (
 
 const AnswerRow = ({ index, label, value, type }) => {
   const renderValue = () => {
-    if (value === null || value === undefined || value === "") {
-      return <span className="italic text-gray-400 dark:text-gray-500">—</span>;
-    }
 
-    if (type === "checkbox") {
-      return (
-        <span className={`px-2 py-0.5 text-xs rounded-full font-medium ${
+  if (value === null || value === undefined || value === "") {
+    return <span className="italic text-gray-400 dark:text-gray-500">—</span>;
+  }
+
+  /* IMAGE */
+if (type === "image") {
+
+  let src = value;
+
+  // File object (preview case)
+  if (value instanceof File) {
+    src = URL.createObjectURL(value);
+  }
+
+  // DB stored path
+  else if (typeof value === "string" && value.startsWith("/uploads")) {
+    src = `${import.meta.env.VITE_API_URL}${value}`;
+  }
+
+  return (
+    <div className="mt-2">
+      <img
+        src={src}
+        alt="audit"
+        className="max-h-56 rounded-lg border shadow-sm"
+      />
+    </div>
+  );
+}
+
+  /* CHECKBOX */
+
+  if (type === "checkbox") {
+    return (
+      <span
+        className={`px-2 py-0.5 text-xs rounded-full font-medium ${
           value
             ? "bg-green-100 text-green-700 dark:bg-green-600/30 dark:text-green-300"
             : "bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300"
-        }`}>
-          {value ? "Yes" : "No"}
-        </span>
-      );
-    }
+        }`}
+      >
+        {value ? "Yes" : "No"}
+      </span>
+    );
+  }
 
-    if (type === "radio") {
-      return (
-        <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-blue-100 text-blue-700 dark:bg-blue-600/30 dark:text-blue-300">
-          {String(value)}
-        </span>
-      );
-    }
+  /* RADIO */
 
+  if (type === "radio") {
     return (
-      <span className="text-gray-800 dark:text-gray-200 text-sm">
+      <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-blue-100 text-blue-700 dark:bg-blue-600/30 dark:text-blue-300">
         {String(value)}
       </span>
     );
-  };
+  }
+
+  /* DEFAULT */
+
+  return (
+    <span className="text-gray-800 dark:text-gray-200 text-sm">
+      {String(value)}
+    </span>
+  );
+};
 
   return (
     <div className="flex items-start gap-4 px-6 py-4">

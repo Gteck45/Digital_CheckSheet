@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useRef } from "react";
 
 const FIELD_TYPES = [
   { type: "button", label: "Button" },
@@ -145,6 +145,10 @@ export default function TemplateBuilder({ initialSchema, onChange }) {
     const newField = defaultField(type);
     setItems((prev) => [...prev, newField]);
     setSelectedId(newField.id);
+  };
+
+  const onFieldClick = (fieldId) => {
+    setSelectedId(fieldId);
   };
 
   const updateSelected = (patch) => {

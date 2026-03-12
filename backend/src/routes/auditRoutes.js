@@ -1,11 +1,14 @@
 const express = require("express");
-const { getAuditConfig, saveAudit, getAudits, getAuditById } = require("../controllers/auditController");
-const { auth } = require("../middleware/auth");
-
 const router = express.Router();
 
-router.get("/config", getAuditConfig);
-router.post("/", auth, saveAudit);
+const upload = require("../middleware/upload");
+const { auth } = require("../middleware/auth");
+const { saveAudit, getAudits, getAuditById } = require("../controllers/auditController");
+
+/* IMAGE + DATA */
+
+router.post("/", auth, upload.any(), saveAudit);
+
 router.get("/", auth, getAudits);
 router.get("/:id", auth, getAuditById);
 

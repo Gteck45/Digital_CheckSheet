@@ -4,7 +4,6 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
-const fileUpload = require('express-fileupload');
 const path = require('path');
 const os = require('os');
 require('dotenv').config();
@@ -79,15 +78,9 @@ app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// 📁 File Uploads
-app.use(fileUpload({
-  limits: { fileSize: parseInt(process.env.MAX_FILE_SIZE) || 5 * 1024 * 1024 },
-  abortOnLimit: true,
-  responseOnLimit: 'File size limit exceeded'
-}));
 
 // 🗂️ Static Files
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
 // 📡 API Monitoring
 app.use('/api', (req, res, next) => {
