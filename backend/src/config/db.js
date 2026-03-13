@@ -62,6 +62,7 @@ const initializeDatabase = async () => {
     await conn.end();
 
     await createTables();
+    await ensureTemplateSchema();
     await seedPages();
     await createSuperAdmin();
 
@@ -355,6 +356,8 @@ CREATE TABLE IF NOT EXISTS \`inspection_slots\` (
 
     version INT DEFAULT 1,
 
+    status ENUM('active','inactive') DEFAULT 'active',
+
     schema_json JSON NOT NULL,
 
     is_deleted BOOLEAN DEFAULT FALSE,
@@ -365,7 +368,8 @@ CREATE TABLE IF NOT EXISTS \`inspection_slots\` (
       ON UPDATE CURRENT_TIMESTAMP,
 
     INDEX idx_entity (entity_type, entity_id),
-    INDEX idx_deleted (is_deleted)
+    INDEX idx_deleted (is_deleted),
+    INDEX idx_templates_status (status)
 
   ) ENGINE=InnoDB;
 `);
@@ -486,6 +490,40 @@ CREATE TABLE IF NOT EXISTS \`audits\` (
   await pool.execute("SET FOREIGN_KEY_CHECKS=1;");
 
   console.log("✅ Tables Created");
+};
+
+const ensureTemplateSchema = async () => {
+  const [tables] = await pool.execute(`
+    SHOW TABLES LIKE 'templates'
+  `);
+
+  if (!tables.length) {
+    return;
+  }
+
+  const [statusColumn] = await pool.execute(`
+    SHOW COLUMNS FROM templates LIKE 'status'
+  `);
+
+  if (!statusColumn.length) {
+    await pool.execute(`
+      ALTER TABLE templates
+      ADD COLUMN status ENUM('active','inactive') DEFAULT 'active' AFTER version
+    `);
+    console.log("✅ Added status column to templates table");
+  }
+
+  const [statusIndex] = await pool.execute(`
+    SHOW INDEX FROM templates WHERE Key_name = 'idx_templates_status'
+  `);
+
+  if (!statusIndex.length) {
+    await pool.execute(`
+      ALTER TABLE templates
+      ADD INDEX idx_templates_status (status)
+    `);
+    console.log("✅ Added templates status index");
+  }
 };
 
 /* ===============================
@@ -622,6 +660,7 @@ module.exports = {
   pool,
   executeQuery,
   execute: executeQuery, // 👈 add this line
+  ensureTemplateSchema,
   testConnection,
   initializeDatabase,
   dropDatabase,

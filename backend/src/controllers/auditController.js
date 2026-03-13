@@ -22,7 +22,8 @@ const getAuditConfig = async (req, res) => {
        FROM templates
        WHERE entity_type = ?
        AND entity_id = ?
-       AND deleted_at IS NULL
+       AND is_deleted = 0
+       AND status = 'active'
        LIMIT 1`,
       [type, id]
     );
@@ -142,6 +143,22 @@ const saveAudit = async (req, res) => {
 
     const auditor_id = req.user?.id || null;
 
+    const [templateRows] = await pool.execute(
+      `SELECT id, name, status, is_deleted
+       FROM templates
+       WHERE id = ?
+       LIMIT 1`,
+      [template_id]
+    );
+
+    const selectedTemplate = templateRows[0];
+
+    if (!selectedTemplate || selectedTemplate.is_deleted || selectedTemplate.status !== "active") {
+      return res.status(400).json({
+        message: "Selected template is inactive or unavailable"
+      });
+    }
+
     /* ===============================
        SAVE AUDIT
     =============================== */
@@ -169,7 +186,7 @@ const saveAudit = async (req, res) => {
         entity_id,
         entity_name || "",
         template_id,
-        template_name || "",
+        selectedTemplate.name,
         slot_id || null,
         auditor_id,
         auditor_name || "",

@@ -33,7 +33,9 @@ export default function TemplatesPage() {
   const load = useCallback(async () => {
     try {
       setLoading(true);
-      const res = await apiService.get(endpoints.templates.list);
+      const res = await apiService.get(endpoints.templates.list, {
+        params: { include_inactive: true },
+      });
       const arr = extractTemplatesArray(res);
       setTemplates(arr);
     } catch (e) {
@@ -56,10 +58,12 @@ export default function TemplatesPage() {
 
     return templates.filter((t) => {
       const name = (t?.name || "").toLowerCase();
+      const status = (t?.status || "").toLowerCase();
       const entityType = (t?.entity_type || "").toLowerCase();
       const entityId = String(t?.entity_id ?? "");
       return (
         name.includes(q) ||
+        status.includes(q) ||
         entityType.includes(q) ||
         entityId.includes(q)
       );
@@ -170,6 +174,9 @@ export default function TemplatesPage() {
                       Entity
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+                      Status
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
                       Version
                     </th>
                     <th className="px-6 py-3 text-right text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
@@ -208,6 +215,18 @@ export default function TemplatesPage() {
                           <span className="capitalize">{t.entity_type}</span>
                           <span className="text-gray-500">#{t.entity_id}</span>
                         </div>
+                      </td>
+
+                      <td className="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                        <span
+                          className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold capitalize ${
+                            t.status === "inactive"
+                              ? "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-200"
+                              : "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300"
+                          }`}
+                        >
+                          {t.status || "active"}
+                        </span>
                       </td>
 
                       {/* Version */}

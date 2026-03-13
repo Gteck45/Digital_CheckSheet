@@ -130,6 +130,7 @@ const startServer = async () => {
    await db.initializeDatabase();
 }
     await db.executeQuery('SELECT 1');
+      await db.ensureTemplateSchema();
     console.log('✅ Database connected successfully');
 
     app.listen(PORT, HOST, () => {

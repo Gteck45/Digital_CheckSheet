@@ -6,9 +6,17 @@ const toId = (v) => {
   return Number.isInteger(n) && n > 0 ? n : null;
 };
 
+const normalizeTemplateName = (value = "") => value.trim().replace(/\s+/g, " ");
+
+const normalizeStatus = (value) =>
+  String(value || "active").toLowerCase() === "inactive" ? "inactive" : "active";
+
+const parseBoolean = (value) =>
+  value === true || String(value || "").toLowerCase() === "true";
+
 exports.create = async (req, res) => {
   try {
-    const { name, entity_type, entity_id, schema_json } = req.body || {};
+    const { name, entity_type, entity_id, schema_json, status } = req.body || {};
     if (!name || !entity_type || !entity_id) {
       return res.status(400).json({
         success: false,
@@ -16,7 +24,29 @@ exports.create = async (req, res) => {
       });
     }
 
-    const id = await Template.create({ name, entity_type, entity_id, schema_json });
+    const normalizedName = normalizeTemplateName(name);
+    if (!normalizedName) {
+      return res.status(400).json({
+        success: false,
+        message: "Template name is required",
+      });
+    }
+
+    const duplicate = await Template.findActiveDuplicateByName(normalizedName);
+    if (duplicate) {
+      return res.status(409).json({
+        success: false,
+        message: "Template name must be unique",
+      });
+    }
+
+    const id = await Template.create({
+      name: normalizedName,
+      entity_type,
+      entity_id,
+      status: normalizeStatus(status),
+      schema_json,
+    });
 
     return res.status(201).json({
       success: true,
@@ -31,7 +61,13 @@ exports.create = async (req, res) => {
 
 exports.getAll = async (req, res) => {
   try {
-    const templates = await Template.getAll();
+    const templates = await Template.getAll({
+      entity_type: req.query.entity_type,
+      entity_id: toId(req.query.entity_id),
+      status: req.query.status,
+      includeInactive: parseBoolean(req.query.include_inactive),
+    });
+
     return res.json({
       success: true,
       message: "Templates retrieved successfully",
@@ -76,12 +112,29 @@ exports.update = async (req, res) => {
       return res.status(400).json({ success: false, message: "Invalid ID" });
     }
 
-    const { name, schema_json } = req.body || {};
+    const { name, schema_json, status } = req.body || {};
     if (!name) {
       return res.status(400).json({ success: false, message: "name is required" });
     }
 
-    const ok = await Template.update(id, { name, schema_json });
+    const normalizedName = normalizeTemplateName(name);
+    if (!normalizedName) {
+      return res.status(400).json({ success: false, message: "Template name is required" });
+    }
+
+    const duplicate = await Template.findActiveDuplicateByName(normalizedName, id);
+    if (duplicate) {
+      return res.status(409).json({
+        success: false,
+        message: "Template name must be unique",
+      });
+    }
+
+    const ok = await Template.update(id, {
+      name: normalizedName,
+      status: normalizeStatus(status),
+      schema_json,
+    });
     if (!ok) {
       return res.status(404).json({
         success: false,

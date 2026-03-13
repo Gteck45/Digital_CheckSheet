@@ -34,6 +34,7 @@ export default function TemplateForm() {
   const [initializing, setInitializing] = useState(isEdit);
 
   const [name, setName] = useState("");
+  const [status, setStatus] = useState("active");
   const [entityType, setEntityType] = useState("line");
   const [entityList, setEntityList] = useState([]);
   const [entityId, setEntityId] = useState("");
@@ -81,6 +82,7 @@ export default function TemplateForm() {
       const data = normalizeTemplateResponse(res);
 
       const nextName = data?.name || "";
+      const nextStatus = data?.status || "active";
       const nextEntityType = data?.entity_type || "line";
       const nextEntityId = String(data?.entity_id || "");
 
@@ -96,6 +98,7 @@ export default function TemplateForm() {
       }
 
       setName(nextName);
+      setStatus(nextStatus);
       setEntityType(nextEntityType);
       setEntityId(nextEntityId);
       setSchema(nextSchema);
@@ -152,6 +155,7 @@ export default function TemplateForm() {
 
       const payload = {
         name: name.trim(),
+        status,
         entity_type: entityType,
         entity_id: Number(entityId),
         schema_json: schema,
@@ -168,7 +172,9 @@ export default function TemplateForm() {
       navigate("/templates");
     } catch (error) {
       console.error("save template error:", error);
-      showToast.error("Save failed");
+      showToast.error(
+        error?.response?.data?.message || "Save failed"
+      );
     } finally {
       setLoading(false);
     }
@@ -218,7 +224,7 @@ export default function TemplateForm() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
           <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4">
             <label className="text-xs font-extrabold text-gray-700 dark:text-gray-200">
               Template Name
@@ -229,6 +235,23 @@ export default function TemplateForm() {
               placeholder="e.g. Line Quality Check"
               className="mt-2 w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white outline-none"
             />
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4">
+            <label className="text-xs font-extrabold text-gray-700 dark:text-gray-200">
+              Status
+            </label>
+            <select
+              value={status}
+              onChange={(e) => setStatus(e.target.value)}
+              className="mt-2 w-full px-3 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white outline-none"
+            >
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+            </select>
+            <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              Only active templates are available when creating new audits
+            </div>
           </div>
 
           <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-4">
