@@ -51,68 +51,67 @@ const AuditListPage = () => {
   });
 
   /* ================= Auto Refresh 30 Sec ================= */
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (activeTab === "upcoming") {
-        fetchData();
-      }
-    }, 30000);
+useEffect(() => {
+  const interval = setInterval(() => {
+    if (activeTab === "upcoming") {
+      fetchData();
+    }
+  }, 30000);
 
-    return () => clearInterval(interval);
-  }, [activeTab, user, isAdmin]);
+  return () => clearInterval(interval);
+}, [activeTab, user, isAdmin]);
 
   /* ================= FETCH DATA ================= */
+  const fetchData = async () => {
+  try {
+    if (activeTab === "upcoming") {
+      setLoadingSlots(true);
+
+      const params = {};
+
+      if (!isAdmin) {
+        params.auditor_id = user.id;
+      }
+
+      const [slotRes, auditRes] = await Promise.all([
+        apiService.get(endpoints.inspectionSlots.list, { params }),
+        apiService.get(endpoints.audit.list),
+      ]);
+
+      const slotData = slotRes?.data?.data?.slots || [];
+      const auditData = auditRes?.data?.data?.audits || [];
+
+      setSlots(slotData);
+      setAudits(auditData);
+    } else {
+      setLoadingAudits(true);
+
+      const params = {};
+
+      if (activeTab === "my") {
+        if (!isAdmin) params.auditor_id = user.id;
+      }
+
+      if (activeTab === "actions") {
+        params.status = "action-required";
+        if (!isAdmin) params.auditor_id = user.id;
+      }
+
+      const res = await apiService.get(endpoints.audit.list, { params });
+
+      const data = res?.data?.data?.audits || [];
+
+      setAudits(data);
+    }
+  } catch (e) {
+    console.error("Failed to load data", e);
+  } finally {
+    setLoadingAudits(false);
+    setLoadingSlots(false);
+  }
+};
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        if (activeTab === "upcoming") {
-          setLoadingSlots(true);
-
-          const params = {};
-
-          if (!isAdmin) {
-            params.auditor_id = user.id;
-          }
-
-          const [slotRes, auditRes] = await Promise.all([
-            apiService.get(endpoints.inspectionSlots.list, { params }),
-            apiService.get(endpoints.audit.list),
-          ]);
-
-          const slotData = slotRes?.data?.data?.slots || [];
-          const auditData = auditRes?.data?.data?.audits || [];
-
-          setSlots(slotData);
-          setAudits(auditData);
-        } else {
-          setLoadingAudits(true);
-
-          const params = {};
-
-          if (activeTab === "my") {
-            if (!isAdmin) params.auditor_id = user.id;
-          }
-
-          if (activeTab === "actions") {
-            params.status = "action-required";
-            if (!isAdmin) params.auditor_id = user.id;
-          }
-
-          const res = await apiService.get(endpoints.audit.list, { params });
-
-          const data = res?.data?.data?.audits || [];
-
-          setAudits(data);
-        }
-      } catch (e) {
-        console.error("Failed to load data", e);
-      } finally {
-        setLoadingAudits(false);
-        setLoadingSlots(false);
-      }
-    };
-
     fetchData();
   }, [activeTab, user, isAdmin]);
 
@@ -126,19 +125,24 @@ const AuditListPage = () => {
 
 const filteredData = useMemo(() => {
   if (activeTab === "upcoming") {
+
     return slots
       .map((slot) => {
-        const completed = audits.some(
-          (a) => Number(a.slot_id) === Number(slot.slot_id)
-        );
+const completed = audits.some(
+  (a) =>
+    String(a.slot_id) === String(slot.slot_id) &&
+    String(a.status).toLowerCase() === "submitted"
+);
 
         return {
           ...slot,
           completed,
           displayStatus: completed ? "COMPLETED" : slot.runtime_status,
         };
+
       })
       .filter((slot) => {
+
         const matchSearch = `${slot.slot_id} ${slot.shift}`
           .toLowerCase()
           .includes(search.toLowerCase());
@@ -150,11 +154,14 @@ const filteredData = useMemo(() => {
           slot.runtime_status === "UPCOMING";
 
         return matchSearch && validStatus;
+
       });
+
   }
 
   return audits.filter((audit) => {
     const title = `${audit.entity_name} ${audit.template_name}`;
+
     const matchSearch =
       title.toLowerCase().includes(search.toLowerCase()) ||
       String(audit.id).includes(search);
@@ -185,6 +192,7 @@ const filteredData = useMemo(() => {
 
     return true;
   });
+
 }, [audits, slots, search, applied, activeTab]);
 
   const appliedChips = useMemo(() => {
