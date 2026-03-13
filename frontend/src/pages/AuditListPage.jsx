@@ -50,45 +50,69 @@ const AuditListPage = () => {
     to: "",
   });
 
+  /* ================= Auto Refresh 30 Sec ================= */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (activeTab === "upcoming") {
+        fetchData();
+      }
+    }, 30000);
+
+    return () => clearInterval(interval);
+  }, [activeTab, user, isAdmin]);
+
   /* ================= FETCH DATA ================= */
 
   useEffect(() => {
     const fetchData = async () => {
-      if (activeTab === "upcoming") {
-        setLoadingSlots(true);
-        try {
-          const res = await apiService.get(endpoints.inspectionSlots.list);
-          const data = res?.data?.data?.slots || [];
-          setSlots(data);
-        } catch (e) {
-          console.error("Failed to load slots", e);
-        } finally {
-          setLoadingSlots(false);
-        }
-      } else {
-        setLoadingAudits(true);
-        try {
+      try {
+        if (activeTab === "upcoming") {
+          setLoadingSlots(true);
+
           const params = {};
-          if (activeTab === "my") {
-            if (!isAdmin) {
-              params.auditor_id = user.id;
-            }
-          } else if (activeTab === "actions") {
-            params.status = "action-required";
-            if (!isAdmin) {
-              params.auditor_id = user.id;
-            }
+
+          if (!isAdmin) {
+            params.auditor_id = user.id;
           }
+
+          const [slotRes, auditRes] = await Promise.all([
+            apiService.get(endpoints.inspectionSlots.list, { params }),
+            apiService.get(endpoints.audit.list),
+          ]);
+
+          const slotData = slotRes?.data?.data?.slots || [];
+          const auditData = auditRes?.data?.data?.audits || [];
+
+          setSlots(slotData);
+          setAudits(auditData);
+        } else {
+          setLoadingAudits(true);
+
+          const params = {};
+
+          if (activeTab === "my") {
+            if (!isAdmin) params.auditor_id = user.id;
+          }
+
+          if (activeTab === "actions") {
+            params.status = "action-required";
+            if (!isAdmin) params.auditor_id = user.id;
+          }
+
           const res = await apiService.get(endpoints.audit.list, { params });
+
           const data = res?.data?.data?.audits || [];
+
           setAudits(data);
-        } catch (e) {
-          console.error("Failed to load audits", e);
-        } finally {
-          setLoadingAudits(false);
         }
+      } catch (e) {
+        console.error("Failed to load data", e);
+      } finally {
+        setLoadingAudits(false);
+        setLoadingSlots(false);
       }
     };
+
     fetchData();
   }, [activeTab, user, isAdmin]);
 
@@ -100,50 +124,68 @@ const AuditListPage = () => {
     [audits, activeTab],
   );
 
-  const filteredData = useMemo(() => {
-    if (activeTab === "upcoming") {
-      return slots.filter((slot) => {
+const filteredData = useMemo(() => {
+  if (activeTab === "upcoming") {
+    return slots
+      .map((slot) => {
+        const completed = audits.some(
+          (a) => Number(a.slot_id) === Number(slot.slot_id)
+        );
+
+        return {
+          ...slot,
+          completed,
+          displayStatus: completed ? "COMPLETED" : slot.runtime_status,
+        };
+      })
+      .filter((slot) => {
         const matchSearch = `${slot.slot_id} ${slot.shift}`
           .toLowerCase()
           .includes(search.toLowerCase());
 
         const validStatus =
-          slot.runtime_status === "upcoming" || slot.runtime_status === "grace";
+          slot.runtime_status === "OPEN" ||
+          slot.runtime_status === "GRACE" ||
+          slot.runtime_status === "LOCKED" ||
+          slot.runtime_status === "UPCOMING";
 
-        const notSubmitted = !slot.audit_submitted;
-
-        return matchSearch && validStatus && notSubmitted;
+        return matchSearch && validStatus;
       });
-    } else {
-      return audits.filter((audit) => {
-        const title = `${audit.entity_name} ${audit.template_name}`;
-        const matchSearch =
-          title.toLowerCase().includes(search.toLowerCase()) ||
-          String(audit.id).includes(search);
-        if (!matchSearch) return false;
+  }
 
-        if (
-          applied.statuses.length > 0 &&
-          !applied.statuses.includes(audit.status)
-        )
-          return false;
-        if (
-          applied.auditors.length > 0 &&
-          !applied.auditors.includes(audit.auditor_name)
-        )
-          return false;
+  return audits.filter((audit) => {
+    const title = `${audit.entity_name} ${audit.template_name}`;
+    const matchSearch =
+      title.toLowerCase().includes(search.toLowerCase()) ||
+      String(audit.id).includes(search);
 
-        if (applied.from) {
-          if (new Date(audit.audit_date) < new Date(applied.from)) return false;
-        }
-        if (applied.to) {
-          if (new Date(audit.audit_date) > new Date(applied.to)) return false;
-        }
+    if (!matchSearch) return false;
 
-        return true;
-      });
+    if (
+      applied.statuses.length > 0 &&
+      !applied.statuses.includes(audit.status)
+    ) {
+      return false;
     }
-  }, [audits, slots, search, applied, activeTab]);
+
+    if (
+      applied.auditors.length > 0 &&
+      !applied.auditors.includes(audit.auditor_name)
+    ) {
+      return false;
+    }
+
+    if (applied.from && new Date(audit.audit_date) < new Date(applied.from)) {
+      return false;
+    }
+
+    if (applied.to && new Date(audit.audit_date) > new Date(applied.to)) {
+      return false;
+    }
+
+    return true;
+  });
+}, [audits, slots, search, applied, activeTab]);
 
   const appliedChips = useMemo(() => {
     const chips = [];
@@ -289,11 +331,11 @@ const AuditListPage = () => {
               active={activeTab === "upcoming"}
               onClick={() => setActiveTab("upcoming")}
             />
-            <Tab
+            {/* <Tab
               label="My Actions"
               active={activeTab === "actions"}
               onClick={() => setActiveTab("actions")}
-            />
+            /> */}
           </div>
 
           <div className="p-6 space-y-3">
@@ -302,19 +344,26 @@ const AuditListPage = () => {
                 Loading...
               </div>
             ) : filteredData.length === 0 ? (
-              <EmptyState />
+              <EmptyState activeTab={activeTab} />
             ) : (
               filteredData.map((item) => (
                 <AuditCard
-                  key={item.id}
-                  item={item}
-                  isSlot={activeTab === "upcoming"}
-                  onOpen={
-                    activeTab === "upcoming"
-                      ? () => navigate(`/audits/new?slot=${item.id}`)
-                      : () => navigate(`/audits/${item.id}`)
-                  }
-                />
+  key={item.id || item.slot_id}
+  item={item}
+  isSlot={activeTab === "upcoming"}
+  onOpen={
+    activeTab === "upcoming"
+      ? () => {
+          if (
+            item.runtime_status === "OPEN" ||
+            item.runtime_status === "GRACE"
+          ) {
+            navigate(`/audits/new?slot=${item.slot_id}`);
+          }
+        }
+      : () => navigate(`/audits/${item.id}`)
+  }
+/>
               ))
             )}
           </div>
@@ -384,66 +433,76 @@ const EmptyState = ({ activeTab }) => (
 
 const AuditCard = ({ item, isSlot, onOpen }) => {
   if (isSlot) {
-    const slot = item;
+    const disabled =
+      item.runtime_status === "LOCKED" ||
+      item.runtime_status === "UPCOMING" ||
+      item.completed;
+
     return (
       <button
+        disabled={disabled}
         onClick={onOpen}
-        className="w-full text-left p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition flex justify-between items-center"
+        className={`w-full text-left p-4 rounded-lg border border-gray-200 dark:border-gray-700 transition flex justify-between items-center ${
+          disabled
+            ? "opacity-50 cursor-not-allowed bg-gray-100 dark:bg-gray-800"
+            : "bg-gray-50 dark:bg-gray-800 hover:bg-gray-100"
+        }`}
       >
         <div>
           <div className="font-medium text-gray-800 dark:text-white">
-            {slot.slot_id} — {slot.shift}
+            {item.slot_id} — {item.shift}
           </div>
+
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mt-1">
             <span className="flex items-center gap-1">
-              <Clock size={14} /> Start: {slot.start_time}
+              <Clock size={14} /> Start: {item.start_time}
             </span>
             <span className="flex items-center gap-1">
-              <Clock size={14} /> End: {slot.end_time}
+              <Clock size={14} /> End: {item.end_time}
             </span>
             <span className="text-xs px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-700 capitalize">
-              {slot.runtime_status}
+              {item.displayStatus}
             </span>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <StatusBadge status={slot.runtime_status} />
-          <ChevronRight className="text-gray-400" size={18} />
-        </div>
-      </button>
-    );
-  } else {
-    const audit = item;
-    return (
-      <button
-        onClick={onOpen}
-        className="w-full text-left p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition flex justify-between items-center"
-      >
-        <div>
-          <div className="font-medium text-gray-800 dark:text-white">
-            {audit.entity_name} — {audit.template_name}
-          </div>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mt-1">
-            <span className="flex items-center gap-1">
-              <Calendar size={14} /> {audit.audit_date}
-            </span>
-            <span className="flex items-center gap-1">
-              <User size={14} /> {audit.auditor_name || "—"}
-            </span>
-            <span className="text-xs px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-700 capitalize">
-              {audit.entity_type}
-            </span>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-3">
-          <StatusBadge status={audit.status} />
+          <StatusBadge status={item.displayStatus} />
           <ChevronRight className="text-gray-400" size={18} />
         </div>
       </button>
     );
   }
+
+  return (
+    <button
+      onClick={onOpen}
+      className="w-full text-left p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750 transition flex justify-between items-center"
+    >
+      <div>
+        <div className="font-medium text-gray-800 dark:text-white">
+          {item.entity_name} — {item.template_name}
+        </div>
+
+        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mt-1">
+          <span className="flex items-center gap-1">
+            <Calendar size={14} /> {item.audit_date}
+          </span>
+          <span className="flex items-center gap-1">
+            <User size={14} /> {item.auditor_name || "—"}
+          </span>
+          <span className="text-xs px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-700 capitalize">
+            {item.entity_type}
+          </span>
+        </div>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <StatusBadge status={item.status} />
+        <ChevronRight className="text-gray-400" size={18} />
+      </div>
+    </button>
+  );
 };
 
 const StatusBadge = ({ status }) => {
@@ -454,22 +513,31 @@ const StatusBadge = ({ status }) => {
       className:
         "bg-green-100 text-green-700 dark:bg-green-600 dark:text-white",
     },
+
     draft: {
       label: "Draft",
       icon: <Clock size={14} />,
       className:
         "bg-yellow-100 text-yellow-700 dark:bg-yellow-500 dark:text-black",
     },
-    upcoming: {
-      label: "Upcoming",
+
+    OPEN: {
+      label: "Open",
       icon: <Clock size={14} />,
       className: "bg-blue-100 text-blue-700 dark:bg-blue-600 dark:text-white",
     },
-    grace: {
+
+    GRACE: {
       label: "Grace",
       icon: <AlertCircle size={14} />,
       className:
         "bg-orange-100 text-orange-700 dark:bg-orange-600 dark:text-white",
+    },
+    COMPLETED: {
+      label: "Completed",
+      icon: <CheckCircle2 size={14} />,
+      className:
+        "bg-green-200 text-green-800 dark:bg-green-700 dark:text-white",
     },
   };
 

@@ -232,6 +232,26 @@ export default function CreateAuditPage() {
 
         {/* HEADER */}
 
+<div className="flex items-center justify-between">
+
+      <div>
+        <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">
+          Create New Audit
+        </h1>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+          Select entity and start inspection audit
+        </p>
+      </div>
+
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-1 px-3 py-2 text-sm rounded-lg border dark:text-white border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+      >
+        <ArrowLeft size={16} />
+        Back
+      </button>
+
+    </div>
 
         {/* ENTITY SELECTION */}
 
