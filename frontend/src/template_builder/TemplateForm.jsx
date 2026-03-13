@@ -278,7 +278,11 @@ export default function TemplateForm() {
         </div>
 
         {/* IMPORTANT: use controlled schema prop, not initialSchema */}
-        <TemplateBuilder schema={schema} onChange={setSchema} />
+        <TemplateBuilder
+  key={JSON.stringify(schema)}
+  initialSchema={schema}
+  onChange={setSchema}
+/>
 
         <div className="flex justify-end">
           <button

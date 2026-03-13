@@ -208,83 +208,196 @@ const MetaCard = ({ icon, label, value }) => (
 =============================== */
 
 const AnswerRow = ({ index, label, value, type }) => {
+
+  const [open, setOpen] = useState(false);
+
   const renderValue = () => {
 
-  if (value === null || value === undefined || value === "") {
-    return <span className="italic text-gray-400 dark:text-gray-500">—</span>;
-  }
+    if (value === null || value === undefined || value === "") {
+      return <span className="italic text-gray-400 dark:text-gray-500">—</span>;
+    }
 
-  /* IMAGE */
+    /* SECTION */
+
+    if (type === "section") {
+      return (
+        <div className="mt-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm font-bold">
+          {label}
+        </div>
+      );
+    }
+
+    /* GROUP */
+
+    if (type === "group") {
+      return (
+        <div className="mt-2 px-3 py-2 rounded-lg border border-dashed text-xs text-gray-500">
+          Group Container
+        </div>
+      );
+    }
+/* IMAGE */
 if (type === "image") {
+
+  const [open, setOpen] = useState(false);
 
   let src = value;
 
-  // File object (preview case)
+  // File preview
   if (value instanceof File) {
     src = URL.createObjectURL(value);
   }
 
   // DB stored path
-  else if (typeof value === "string" && value.startsWith("/uploads")) {
-    src = `${import.meta.env.VITE_API_URL}${value}`;
+  else if (typeof value === "string") {
+
+    const baseUrl = import.meta.env.VITE_API_URL.replace("/api", "");
+
+    // remove /api if present
+    const cleanPath = value.replace("/api", "");
+
+    src = `${baseUrl}${cleanPath}`;
+
   }
 
   return (
-    <div className="mt-2">
-      <img
-        src={src}
-        alt="audit"
-        className="max-h-56 rounded-lg border shadow-sm"
-      />
-    </div>
+    <>
+      {/* Preview Image */}
+      <div className="mt-2">
+        <img
+          src={src}
+          alt="audit"
+          onClick={() => setOpen(true)}
+          className="max-h-56 rounded-lg border shadow-sm cursor-zoom-in hover:opacity-90 transition"
+        />
+      </div>
+
+      {/* Zoom Modal */}
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+          onClick={() => setOpen(false)}
+        >
+          <img
+            src={src}
+            alt="zoom"
+            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-xl"
+          />
+        </div>
+      )}
+    </>
   );
 }
 
-  /* CHECKBOX */
+    /* CHECKBOX */
 
-  if (type === "checkbox") {
+    if (type === "checkbox") {
+      return (
+        <span
+          className={`px-2 py-0.5 text-xs rounded-full font-medium ${
+            value
+              ? "bg-green-100 text-green-700 dark:bg-green-600/30 dark:text-green-300"
+              : "bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300"
+          }`}
+        >
+          {value ? "Yes" : "No"}
+        </span>
+      );
+    }
+
+    /* RADIO */
+
+    if (type === "radio") {
+      return (
+        <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-blue-100 text-blue-700 dark:bg-blue-600/30 dark:text-blue-300">
+          {String(value)}
+        </span>
+      );
+    }
+
+    /* LIST */
+
+    if (type === "list") {
+      return (
+        <span className="px-2 py-0.5 text-xs rounded-full bg-purple-100 text-purple-700 dark:bg-purple-600/30 dark:text-purple-300">
+          {String(value)}
+        </span>
+      );
+    }
+
+    /* DATE */
+
+    if (type === "date") {
+      return (
+        <span className="text-sm text-gray-800 dark:text-gray-200">
+          {new Date(value).toLocaleDateString("en-IN")}
+        </span>
+      );
+    }
+
+    /* DATETIME */
+
+    if (type === "datetime") {
+      return (
+        <span className="text-sm text-gray-800 dark:text-gray-200">
+          {new Date(value).toLocaleString("en-IN")}
+        </span>
+      );
+    }
+
+    /* TEMPERATURE */
+
+    if (type === "temperature") {
+      return (
+        <span className="px-2 py-0.5 text-xs rounded-full bg-orange-100 text-orange-700 dark:bg-orange-600/30 dark:text-orange-300">
+          {value} °C
+        </span>
+      );
+    }
+
+    /* NUMBER */
+
+    if (type === "number") {
+      return (
+        <span className="text-gray-800 dark:text-gray-200 text-sm">
+          {Number(value)}
+        </span>
+      );
+    }
+
+    /* BUTTON */
+
+    if (type === "button") {
+      return (
+        <span className="text-xs text-gray-500 italic">
+          Button action
+        </span>
+      );
+    }
+
+    /* DEFAULT TEXT */
+
     return (
-      <span
-        className={`px-2 py-0.5 text-xs rounded-full font-medium ${
-          value
-            ? "bg-green-100 text-green-700 dark:bg-green-600/30 dark:text-green-300"
-            : "bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300"
-        }`}
-      >
-        {value ? "Yes" : "No"}
-      </span>
-    );
-  }
-
-  /* RADIO */
-
-  if (type === "radio") {
-    return (
-      <span className="px-2 py-0.5 text-xs rounded-full font-medium bg-blue-100 text-blue-700 dark:bg-blue-600/30 dark:text-blue-300">
+      <span className="text-gray-800 dark:text-gray-200 text-sm">
         {String(value)}
       </span>
     );
-  }
-
-  /* DEFAULT */
-
-  return (
-    <span className="text-gray-800 dark:text-gray-200 text-sm">
-      {String(value)}
-    </span>
-  );
-};
+  };
 
   return (
     <div className="flex items-start gap-4 px-6 py-4">
       <span className="mt-0.5 w-6 h-6 flex-shrink-0 rounded-full bg-gray-100 dark:bg-gray-800 text-xs font-bold text-gray-500 dark:text-gray-400 flex items-center justify-center">
         {index}
       </span>
+
       <div className="flex-1 min-w-0">
         <div className="text-sm font-medium text-gray-700 dark:text-gray-300">
           {label}
         </div>
-        <div className="mt-1">{renderValue()}</div>
+
+        <div className="mt-1">
+          {renderValue()}
+        </div>
       </div>
     </div>
   );

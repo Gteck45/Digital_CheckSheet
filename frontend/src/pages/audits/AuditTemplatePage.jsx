@@ -354,7 +354,6 @@ const Info = ({ label, value, icon }) => (
 );
 
 
-/* QUESTION COMPONENT */
 const Question = ({ question, value, onChange }) => {
 
   const [location, setLocation] = useState(null);
@@ -365,14 +364,12 @@ const Question = ({ question, value, onChange }) => {
   const videoRef = React.useRef(null);
   const canvasRef = React.useRef(null);
 
-  /* Attach stream to video */
   useEffect(() => {
     if (videoRef.current && stream) {
       videoRef.current.srcObject = stream;
     }
   }, [stream]);
 
-  /* Get GPS once */
   useEffect(() => {
     if (!navigator.geolocation) return;
 
@@ -388,7 +385,6 @@ const Question = ({ question, value, onChange }) => {
     );
   }, []);
 
-  /* FILE UPLOAD */
   const handleFile = (file) => {
 
     if (!file) return;
@@ -399,8 +395,6 @@ const Question = ({ question, value, onChange }) => {
     onChange(question.id, file);
 
   };
-
-  /* OPEN CAMERA */
 
   const openCamera = async () => {
 
@@ -415,14 +409,11 @@ const Question = ({ question, value, onChange }) => {
 
     } catch (err) {
 
-      console.error(err);
       toast.error("Camera access denied");
 
     }
 
   };
-
-  /* CAPTURE PHOTO */
 
   const capturePhoto = () => {
 
@@ -437,8 +428,6 @@ const Question = ({ question, value, onChange }) => {
     const ctx = canvas.getContext("2d");
 
     ctx.drawImage(video, 0, 0);
-
-    /* WATERMARK */
 
     const now = new Date();
     const date = now.toLocaleDateString("en-IN");
@@ -456,8 +445,6 @@ const Question = ({ question, value, onChange }) => {
     ctx.fillStyle = "white";
     ctx.fillText(watermark, 15, canvas.height - 20);
 
-    /* CONVERT TO FILE */
-
     canvas.toBlob((blob) => {
 
       const file = new File(
@@ -472,13 +459,39 @@ const Question = ({ question, value, onChange }) => {
 
     }, "image/jpeg", 0.9);
 
-    /* STOP CAMERA */
-
     stream?.getTracks().forEach(track => track.stop());
     setCameraOpen(false);
     setStream(null);
 
   };
+
+  /* ===============================
+     SECTION
+  =============================== */
+
+  if (question.type === "section") {
+
+    return (
+      <div className="text-lg font-bold text-gray-800 dark:text-white">
+        {question.label}
+      </div>
+    );
+
+  }
+
+  /* ===============================
+     GROUP
+  =============================== */
+
+  if (question.type === "group") {
+
+    return (
+      <div className="text-sm font-semibold text-gray-500">
+        {question.label}
+      </div>
+    );
+
+  }
 
   /* ===============================
      TEXT
@@ -488,13 +501,11 @@ const Question = ({ question, value, onChange }) => {
 
     return (
       <div>
-        <div className="text-sm mb-2">
-          {question.label}
-        </div>
-
+        <div className="text-sm mb-2">{question.label}</div>
         <input
           type="text"
           value={value || ""}
+          placeholder={question.placeholder}
           onChange={(e) => onChange(question.id, e.target.value)}
           className="w-full px-3 py-2 border rounded-lg"
         />
@@ -507,19 +518,143 @@ const Question = ({ question, value, onChange }) => {
      NUMBER
   =============================== */
 
-  if (question.type === "number") {
+  if (question.type === "number" || question.type === "temperature") {
 
     return (
       <div>
         <div className="text-sm mb-2">{question.label}</div>
-
         <input
           type="number"
+          value={value || ""}
+          placeholder={question.placeholder}
+          onChange={(e) => onChange(question.id, e.target.value)}
+          className="w-full px-3 py-2 border rounded-lg"
+        />
+      </div>
+    );
+
+  }
+
+  /* ===============================
+     DATE
+  =============================== */
+
+  if (question.type === "date") {
+
+    return (
+      <div>
+        <div className="text-sm mb-2">{question.label}</div>
+        <input
+          type="date"
           value={value || ""}
           onChange={(e) => onChange(question.id, e.target.value)}
           className="w-full px-3 py-2 border rounded-lg"
         />
       </div>
+    );
+
+  }
+
+  /* ===============================
+     DATETIME
+  =============================== */
+
+  if (question.type === "datetime") {
+
+    return (
+      <div>
+        <div className="text-sm mb-2">{question.label}</div>
+        <input
+          type="datetime-local"
+          value={value || ""}
+          onChange={(e) => onChange(question.id, e.target.value)}
+          className="w-full px-3 py-2 border rounded-lg"
+        />
+      </div>
+    );
+
+  }
+
+  /* ===============================
+     LIST
+  =============================== */
+
+  if (question.type === "list") {
+
+    return (
+      <div>
+        <div className="text-sm mb-2">{question.label}</div>
+        <select
+          value={value || ""}
+          onChange={(e) => onChange(question.id, e.target.value)}
+          className="w-full px-3 py-2 border rounded-lg"
+        >
+          <option value="">Select</option>
+          {(question.options || []).map((opt, i) => (
+            <option key={i} value={opt}>
+              {opt}
+            </option>
+          ))}
+        </select>
+      </div>
+    );
+
+  }
+
+  /* ===============================
+     RADIO
+  =============================== */
+
+  if (question.type === "radio") {
+
+    return (
+      <div>
+        <div className="text-sm mb-2">{question.label}</div>
+
+        <div className="flex gap-4">
+
+          {(question.options || []).map((opt, i) => (
+
+            <label key={i} className="flex items-center gap-2">
+
+              <input
+                type="radio"
+                name={question.id}
+                checked={value === opt}
+                onChange={() => onChange(question.id, opt)}
+              />
+
+              {opt}
+
+            </label>
+
+          ))}
+
+        </div>
+
+      </div>
+    );
+
+  }
+
+  /* ===============================
+     CHECKBOX
+  =============================== */
+
+  if (question.type === "checkbox") {
+
+    return (
+      <label className="flex items-center gap-2">
+
+        <input
+          type="checkbox"
+          checked={value || false}
+          onChange={(e) => onChange(question.id, e.target.checked)}
+        />
+
+        {question.label}
+
+      </label>
     );
 
   }
@@ -536,8 +671,6 @@ const Question = ({ question, value, onChange }) => {
 
         <div className="text-sm mb-2">{question.label}</div>
 
-        {/* PREVIEW */}
-
         {preview && (
           <img
             src={preview}
@@ -545,8 +678,6 @@ const Question = ({ question, value, onChange }) => {
             className="mb-3 rounded-lg max-h-48 border"
           />
         )}
-
-        {/* FILE INPUT */}
 
         <input
           type="file"
@@ -556,8 +687,6 @@ const Question = ({ question, value, onChange }) => {
           className="w-full px-3 py-2 border rounded-lg mb-2"
         />
 
-        {/* CAMERA BUTTON */}
-
         <button
           type="button"
           onClick={openCamera}
@@ -565,8 +694,6 @@ const Question = ({ question, value, onChange }) => {
         >
           Open Camera
         </button>
-
-        {/* CAMERA STREAM */}
 
         {cameraOpen && (
 
@@ -595,6 +722,21 @@ const Question = ({ question, value, onChange }) => {
 
       </div>
 
+    );
+
+  }
+
+  /* BUTTON */
+
+  if (question.type === "button") {
+
+    return (
+      <button
+        type="button"
+        className="px-4 py-2 bg-gray-900 text-white rounded-lg"
+      >
+        {question.label}
+      </button>
     );
 
   }
